@@ -1,0 +1,144 @@
+.logo {
+   font-family: "Merriweather";
+   @include adaptiveValue("font-size", 30, 20);
+   line-height: lineHeight(38, 30);
+   font-weight: 700;
+   font-style: italic;
+}
+
+.button {
+   padding: toRem(16) toRem(37);
+   font-family: "DM Serif Text";
+   @include adaptiveValue("font-size", 28, 26);
+   color: $whiteColor;
+	text-align: center;
+
+   background-color: $darkColor;
+   border-radius: toRem(5);
+   border: toRem(1) solid transparent;
+   transition: all 0.3s;
+
+   @media (any-hover: hover) {
+      &:hover {
+         color: $darkColor;
+         border-color: $darkColor;
+         background-color: $whiteColor;
+      }
+   }
+
+	@media (max-width: toEm($mobileSmall)) {
+		width: 100%;
+	}
+
+   // .button-small
+   &--small {
+		@include adaptiveValue("font-size", 20, 18);
+      padding: toRem(12) toRem(26);
+   }
+}
+
+.block-header {
+   text-align: center;
+
+   // .block-heade--left
+   &--left {
+      text-align: left;
+   }
+
+   // .block-heade--big
+   &--big {
+      .block-header__lable {
+         @include adaptiveValue("font-size", 28, 22);
+         line-height: lineHeight(34, 28);
+
+         &:not(:last-child) {
+            margin-bottom: toRem(13);
+         }
+      }
+
+      .block-header__title {
+         @include adaptiveValue("font-size", 59, 30);
+         line-height: lineHeight(86, 59);
+
+         &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 25, 10);
+         }
+      }
+
+      .block-header__text {
+         color: #474747;
+         font-family: "Inter";
+         font-weight: 400;
+      }
+   }
+
+   // .block-heade--main
+   &--main {
+      .block-header__title {
+         @include adaptiveValue("font-size", 78, 32);
+         line-height: lineHeight(99, 78);
+
+         &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 32, 15);
+         }
+      }
+
+      .block-header__text {
+         @include adaptiveValue("font-size", 22, 18);
+         color: #727272;
+      }
+   }
+
+   // .block-heade--white
+   &--white {
+      .block-header__lable {
+         color: $whiteColor;
+      }
+
+      .block-header__title {
+         color: $whiteColor;
+      }
+
+      .block-header__text {
+         color: $whiteColor;
+      }
+   }
+
+   // .block-header__lable
+   &__lable {
+      font-size: toRem(15);
+      line-height: lineHeight(18, 15);
+      color: #d06b00;
+
+      &:not(:last-child) {
+         margin-bottom: toRem(7);
+      }
+   }
+   // .block-header__title
+   &__title {
+      color: $darkColor;
+      font-family: "DM Serif Text";
+      @include adaptiveValue("font-size", 48, 30);
+      line-height: lineHeight(61, 48);
+
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 19, 10);
+      }
+   }
+   // .block-header__text
+   &__text {
+      color: $grayColor;
+      font-family: "Raleway";
+      font-weight: 500;
+      @include adaptiveValue("font-size", 20, 18);
+      line-height: lineHeight(25, 20);
+
+      &:not(:last-child) {
+         margin-bottom: toRem(15);
+      }
+
+      & > *:not(:last-child) {
+         margin-bottom: toRem(10);
+      }
+   }
+}

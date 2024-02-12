@@ -1,0 +1,201 @@
+.header {
+	background-color: $bgColor;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 50;
+   border-bottom: toRem(1) solid #83838336;
+
+   // .header__container
+   &__container {
+      @include adaptiveValue(
+         "min-height",
+         106,
+         70,
+         0,
+         $containerWidth,
+         $tablet
+      );
+      padding-top: toRem(10);
+      padding-bottom: toRem(10);
+      display: flex;
+      justify-content: space-between;
+      column-gap: toRem(8);
+      align-items: center;
+   }
+
+   // .header__logo
+   &__logo,
+   &__login {
+      position: relative;
+      z-index: 2;
+      flex-shrink: 0;
+   }
+
+   // .header__login
+   &__login {
+      flex-shrink: 0;
+
+      @media (max-width: toEm($tablet)) {
+         display: flex;
+         gap: toRem(10);
+         align-items: center;
+      }
+   }
+}
+
+.menu {
+   font-family: "Merriweather";
+
+   // .menu__body
+   &__body {
+      @media (max-width: toEm($tablet)) {
+         padding: toRem(90) toRem(15) toRem(30);
+         position: fixed;
+         top: 0;
+         left: 100%;
+         height: 100%;
+         width: 100%;
+
+         overflow: auto;
+         transition: all 0.3s;
+
+         &::before {
+            content: "";
+            width: 100%;
+            min-height: toRem(70);
+            background-color: #fad2b1;
+            transition: all 0.3s;
+
+            position: fixed;
+            top: 0;
+            left: 100%;
+            z-index: 5;
+         }
+      }
+   }
+
+   // .menu__list
+   &__list {
+      @media (min-width: toEm($tablet)) {
+         display: flex;
+         flex-wrap: wrap;
+         align-items: center;
+
+         @include adaptiveValue(
+            "column-gap",
+            36,
+            20,
+            0,
+            $containerWidth,
+            $tablet
+         );
+      }
+
+      @media (max-width: toEm($tablet)) {
+         text-align: center;
+
+         & > *:not(:last-child) {
+            margin-bottom: toRem(20);
+         }
+      }
+   }
+
+   // .menu__item
+   &__item {
+   }
+
+   // .menu__link
+   &__link {
+      font-size: toRem(30);
+      display: block;
+
+      @media (min-width: toEm($tablet)) {
+         font-size: toRem(20);
+
+         @media (any-hover: hover) {
+            &:hover:not(&--active) {
+               color: #d06b00;
+            }
+         }
+
+         &--active {
+            font-weight: 700;
+            text-decoration: underline;
+         }
+      }
+   }
+}
+
+.icon-menu {
+   display: none;
+
+   @media (max-width: toEm($tablet)) {
+      padding: toRem(5);
+      display: block;
+      flex: 0 0 toRem(40);
+      width: toRem(40);
+      height: toRem(40);
+      border-radius: toRem(5);
+      position: relative;
+      background-color: $darkColor;
+
+      span,
+      &::after,
+      &::before {
+         content: "";
+         width: toRem(30);
+         height: toRem(3);
+         background-color: $bgColor;
+
+         position: absolute;
+         left: 50%;
+         transform: translate(-50%, 0);
+
+			transition: all 0.3s;
+      }
+
+      &::after {
+         bottom: toRem(8);
+      }
+
+      &::before {
+         top: toRem(8);
+      }
+
+      & span {
+         transform: translate(-50%, -50%);
+      }
+   }
+}
+
+.menu-open {
+   @media (max-width: toEm($tablet)) {
+      .menu__body {
+         left: 0;
+      }
+
+      .menu__body::before {
+         left: 0;
+      }
+
+      .icon-menu span {
+         opacity: 0;
+      }
+
+      .icon-menu::after {
+         bottom: 50%;
+         transform: translate(-50%, 50%) rotate(45deg);
+      }
+
+      .icon-menu::before {
+         top: 50%;
+         transform: translate(-50%, -50%) rotate(-45deg);
+      }
+
+      body {
+         overflow: hidden;
+      }
+   }
+}
