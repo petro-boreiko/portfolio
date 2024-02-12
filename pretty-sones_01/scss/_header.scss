@@ -51,6 +51,7 @@
    // .menu__body
    &__body {
       @media (max-width: toEm($tablet)) {
+			background-color: $bgColor;
          padding: toRem(90) toRem(15) toRem(30);
          position: fixed;
          top: 0;
