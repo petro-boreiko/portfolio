@@ -105,6 +105,12 @@
       @media (min-width: toEm($tablet)) {
          min-height: toRem(536);
       }
+
+      @media (max-width: toEm($tablet)) {
+         &:not(:last-child) {
+            margin-bottom: toRem(30);
+         }
+      }
    }
 
    // .hero__img

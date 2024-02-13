@@ -924,6 +924,11 @@ body {
     min-height: 33.5rem;
   }
 }
+@media (max-width: 61.99875em) {
+  .hero__images:not(:last-child) {
+    margin-bottom: 1.875rem;
+  }
+}
 .hero__img {
   -o-object-fit: cover;
      object-fit: cover;
