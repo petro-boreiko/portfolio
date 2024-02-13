@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 document.addEventListener("click", clickEvents);
 
@@ -18,7 +18,7 @@ function transferElement(
    sizeToTransfer, // Розмір вюпорта де відбуваються зміни
    placeOriginalParent, // Місце в функції "insertAdjacentElement"
    placeNewParent, // Місце в функції "insertAdjacentElement"
-   classAdd // Кдас який додається до html для стилізації елемента 
+   classAdd // Кдас який додається до html для стилізації елемента
 ) {
    // Наш елемент
    const elementDoc = document.querySelector(element);
@@ -58,7 +58,19 @@ window.addEventListener("resize", function () {
       ".hero__buttons", // element
       ".hero__body", // originalParent
       ".hero__container", // newParent
-      992.98, // sizeToTransfer
+      991.98, // sizeToTransfer
+      "beforeend", // placeOriginalParent
+      "beforeend", //placeNewParent
+      "transfer-our-element" // classAdd
+   );
+});
+
+window.addEventListener("load", function () {
+   transferElement(
+      ".hero__buttons", // element
+      ".hero__body", // originalParent
+      ".hero__container", // newParent
+      991.98, // sizeToTransfer
       "beforeend", // placeOriginalParent
       "beforeend", //placeNewParent
       "transfer-our-element" // classAdd
