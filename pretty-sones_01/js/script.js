@@ -65,7 +65,9 @@ window.addEventListener("resize", function () {
    );
 });
 
-window.addEventListener("load", function () {
+// добавляємо прослушку "DOMContentLoaded"("load") щоб при загрузці наш елемунт теж був на місці де нам потрібно а не на початковому місці
+
+window.addEventListener("DOMContentLoaded", function () {
    transferElement(
       ".hero__buttons", // element
       ".hero__body", // originalParent
