@@ -10,7 +10,7 @@ function clickEvents(e) {
    }
 }
 
-// Функція для переносу елементу
+// ?Функція для переносу елементу
 function transferElement(
    element, // Наш елемент
    originalParent, // Батько елемента
@@ -53,6 +53,7 @@ function transferElement(
    }
 }
 
+// прослушка на зміну розміру екрану "resize"
 window.addEventListener("resize", function () {
    transferElement(
       ".hero__buttons", // element
@@ -65,7 +66,7 @@ window.addEventListener("resize", function () {
    );
 });
 
-// добавляємо прослушку "DOMContentLoaded"("load") щоб при загрузці наш елемунт теж був на місці де нам потрібно а не на початковому місці
+// добавляємо прослушку "DOMContentLoaded"("load") щоб при загрузці сторінки наш елемунт знаходився де нам потрібно а не на початковому місці
 
 window.addEventListener("DOMContentLoaded", function () {
    transferElement(
@@ -78,3 +79,48 @@ window.addEventListener("DOMContentLoaded", function () {
       "transfer-our-element" // classAdd
    );
 });
+
+// !Tabs start
+// навігація табів
+const tabsItmes = document.querySelectorAll(".tabs-products__item");
+// контент табів
+const tabsContent = document.querySelectorAll(".tabs-products__cards");
+
+// перебираємо навігацію
+tabsItmes.forEach((item) => {
+
+	// вішаємо прослушку клік
+   item.addEventListener("click", function (e) {
+      // отримуємо значення атрибуту data-tab нашого елемента
+      const itemTarget = e.target.getAttribute("data-tab");
+
+		// ? Позволить забрати клас active і додати клас hidden щоб дані класи використовувалися тільки для одного елемента а не для всіх
+		// start
+      // забирає активний клас у елумента навігації
+      tabsItmes.forEach((element) => {
+         element.classList.remove("tabs-products__item--active");
+      });
+
+      // додає класс до контенту елементу таба
+      tabsContent.forEach((element) => {
+         element.classList.add("hidden");
+      });
+		// end
+
+      // додаємо активний клас у елемента навігації
+      item.classList.add("tabs-products__item--active");
+
+		// видаляємо класс по ід 
+      document.getElementById(itemTarget).classList.remove("hidden");
+   });
+});
+
+
+// Для того щоб при загрузці сторінки одразубув активний один із табів
+document
+   .querySelector('[data-tab="tabs-products_01"]')
+   .classList.add("tabs-products__item--active");
+
+document.querySelector("#tabs-products_01").classList.remove("hidden");
+
+// !Tabs end

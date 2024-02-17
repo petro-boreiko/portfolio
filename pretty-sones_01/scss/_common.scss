@@ -11,7 +11,7 @@
    font-family: "DM Serif Text";
    @include adaptiveValue("font-size", 28, 26);
    color: $whiteColor;
-	text-align: center;
+   text-align: center;
 
    background-color: $darkColor;
    border-radius: toRem(5);
@@ -26,13 +26,13 @@
       }
    }
 
-	@media (max-width: toEm($mobileSmall)) {
-		width: 100%;
-	}
+   @media (max-width: toEm($mobileSmall)) {
+      width: 100%;
+   }
 
    // .button-small
    &--small {
-		@include adaptiveValue("font-size", 20, 18);
+      @include adaptiveValue("font-size", 20, 18);
       padding: toRem(12) toRem(26);
    }
 }
@@ -108,7 +108,7 @@
    &__lable {
       font-size: toRem(15);
       line-height: lineHeight(18, 15);
-      color: #d06b00;
+      color: $orangeColor;
 
       &:not(:last-child) {
          margin-bottom: toRem(7);

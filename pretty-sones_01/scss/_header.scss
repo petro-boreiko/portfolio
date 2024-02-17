@@ -117,7 +117,7 @@
 
          @media (any-hover: hover) {
             &:hover:not(&--active) {
-               color: #d06b00;
+               color: $orangeColor;
             }
          }
 
