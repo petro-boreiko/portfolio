@@ -37,19 +37,67 @@ body {
 .page {
    // .page__hero
    &__hero {
-      @include adaptiveValue("padding-top", 206, 95, 0,$containerWidth, $tablet);
-      @include adaptiveValue("padding-bottom", 140, 40, 0,$containerWidth, $tablet);
-	}
+      @include adaptiveValue(
+         "padding-top",
+         206,
+         95,
+         0,
+         $containerWidth,
+         $tablet
+      );
+      @include adaptiveValue(
+         "padding-bottom",
+         140,
+         40,
+         0,
+         $containerWidth,
+         $tablet
+      );
+   }
 
-	// .page__products
-		&__products {
-		}	
-		
-		// .page__blog
-		&__blog {
-			@include adaptiveValue("padding-top", 140, 40, 0,$containerWidth, $tablet);
-      	@include adaptiveValue("padding-bottom", 70, 20, 0,$containerWidth, $tablet);
-		}
+   // .page__products
+   &__products {
+   }
+
+   // .page__blog
+   &__blog {
+      @include adaptiveValue(
+         "padding-top",
+         140,
+         40,
+         0,
+         $containerWidth,
+         $tablet
+      );
+      @include adaptiveValue(
+         "padding-bottom",
+         70,
+         20,
+         0,
+         $containerWidth,
+         $tablet
+      );
+   }
+
+   // .page__popular
+   &__popular {
+		@include adaptiveValue(
+         "padding-top",
+         70,
+         20,
+         0,
+         $containerWidth,
+         $tablet
+      );
+      @include adaptiveValue(
+         "padding-bottom",
+         70,
+         20,
+         0,
+         $containerWidth,
+         $tablet
+      );
+   }
 }
 
 // Hero
@@ -57,7 +105,5 @@ body {
 
 @import "_products.scss";
 @import "_blog.scss";
-
-
-
+@import "_popular.scss";
 

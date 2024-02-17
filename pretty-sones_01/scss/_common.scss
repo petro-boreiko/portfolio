@@ -153,7 +153,11 @@
    font-weight: 700;
    @include adaptiveValue("font-size", 24, 20);
    @include adaptiveValue("line-height", 34, 26);
-   color: $whiteColor;
+   color: $mainColor;
+
+   &--white {
+      color: $whiteColor;
+   }
 
    // .item-product__img
    &__img {
@@ -170,13 +174,19 @@
 
          @media (any-hover: hover) {
             &:hover {
-               transform: scale(1.15);
+               transform: scale(1.1);
             }
          }
       }
 
       &:not(:last-child) {
          @include adaptiveValue("margin-bottom", 17, 6);
+      }
+
+      &--big {
+         @media (min-width: toEm($tablet)) {
+            aspect-ratio: 369 / 277;
+         }
       }
    }
    // .item-product__title

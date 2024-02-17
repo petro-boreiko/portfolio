@@ -1,0 +1,62 @@
+.popular {
+   // .popular__container
+   &__container {
+   }
+   // .popular__top
+   &__top {
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 128, 30);
+      }
+   }
+   // .popular__content
+   &__content {
+      @media (min-width: toEm($tablet)) {
+         display: flex;
+         align-items: flex-start;
+         @include adaptiveValue(
+            "column-gap",
+            30,
+            15,
+            0,
+            $containerWidth,
+            $tablet
+         );
+      }
+   }
+   // .popular__img
+   &__img {
+      display: none;
+
+      @media (min-width: toEm($tablet)) {
+         display: inline-block;
+         flex: 0 0 33.166667%;
+         aspect-ratio: 398 / 728;
+         overflow: hidden;
+
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+
+            @media (any-hover: hover) {
+               &:hover {
+                  transform: scale(1.1);
+               }
+            }
+         }
+      }
+   }
+   // .popular__items
+   &__items {
+      display: grid;
+      @include adaptiveValue("column-gap", 30, 20, 0, $containerWidth, $tablet);
+      @include adaptiveValue("row-gap", 47, 20, 0, $containerWidth, $tablet);
+      grid-template-columns: repeat(auto-fill, minmax(toRem(230), 1fr));
+
+      @media (min-width: toEm($tablet)) {
+         flex: 1 0 auto;
+         grid-template-columns: repeat(auto-fill, minmax(toRem(250), 1fr));
+      }
+   }
+}
