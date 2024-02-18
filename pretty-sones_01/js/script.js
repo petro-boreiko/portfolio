@@ -88,14 +88,13 @@ const tabsContent = document.querySelectorAll(".tabs-products__cards");
 
 // перебираємо навігацію
 tabsItmes.forEach((item) => {
-
-	// вішаємо прослушку клік
+   // вішаємо прослушку клік
    item.addEventListener("click", function (e) {
       // отримуємо значення атрибуту data-tab нашого елемента
       const itemTarget = e.target.getAttribute("data-tab");
 
-		// ? Позволить забрати клас active і додати клас hidden щоб дані класи використовувалися тільки для одного елемента а не для всіх
-		// start
+      // ? Позволить забрати клас active і додати клас hidden щоб дані класи використовувалися тільки для одного елемента а не для всіх
+      // start
       // забирає активний клас у елумента навігації
       tabsItmes.forEach((element) => {
          element.classList.remove("tabs-products__item--active");
@@ -105,16 +104,15 @@ tabsItmes.forEach((item) => {
       tabsContent.forEach((element) => {
          element.classList.add("hidden");
       });
-		// end
+      // end
 
       // додаємо активний клас у елемента навігації
       item.classList.add("tabs-products__item--active");
 
-		// видаляємо класс по ід 
+      // видаляємо класс по ід
       document.getElementById(itemTarget).classList.remove("hidden");
    });
 });
-
 
 // Для того щоб при загрузці сторінки одразубув активний один із табів
 document
@@ -124,3 +122,42 @@ document
 document.querySelector("#tabs-products_01").classList.remove("hidden");
 
 // !Tabs end
+
+// ! Slider start
+const testimonialsSlider = document.querySelector(".testimonials");
+if (testimonialsSlider) {
+   new Swiper('.testimonials__slider', {
+      // Optional parameters
+      loop: true,
+      // autoHeight: true,
+      speed: 800,
+      spaceBetween: 30,
+      slidesPerView: 2,
+
+      // If we need pagination
+      pagination: {
+         el: ".testimonials__pages",
+         clickable: true,
+      },
+
+      breakpoints: {
+         // when window width is >= 320px
+         320: {
+            slidesPerView: 1.2,
+            spaceBetween: 15,
+         },
+         // when window width is >= 767px
+        660: {
+            slidesPerView: 1.5,
+            spaceBetween: 20,
+         },
+         // when window width is >= 992px
+        992: {
+            slidesPerView: 2,
+            spaceBetween: 25,
+         },
+      },
+   });
+}
+
+// ! Slider end

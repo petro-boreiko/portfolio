@@ -81,7 +81,7 @@ body {
 
    // .page__popular
    &__popular {
-		@include adaptiveValue(
+      @include adaptiveValue(
          "padding-top",
          70,
          20,
@@ -98,6 +98,26 @@ body {
          $tablet
       );
    }
+
+   // .page__testimonials
+   &__testimonials {
+      @include adaptiveValue(
+         "padding-top",
+         70,
+         20,
+         0,
+         $containerWidth,
+         $tablet
+      );
+      @include adaptiveValue(
+         "padding-bottom",
+         120,
+         40,
+         0,
+         $containerWidth,
+         $tablet
+      );
+   }
 }
 
 // Hero
@@ -106,4 +126,4 @@ body {
 @import "_products.scss";
 @import "_blog.scss";
 @import "_popular.scss";
-
+@import "_testimonials.scss";
