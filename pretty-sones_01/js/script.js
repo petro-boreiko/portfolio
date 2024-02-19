@@ -113,14 +113,12 @@ tabsItmes.forEach((item) => {
       document.getElementById(itemTarget).classList.remove("hidden");
    });
 });
-
 // Для того щоб при загрузці сторінки одразубув активний один із табів
 document
    .querySelector('[data-tab="tabs-products_01"]')
    .classList.add("tabs-products__item--active");
 
 document.querySelector("#tabs-products_01").classList.remove("hidden");
-
 // !Tabs end
 
 // ! Slider start

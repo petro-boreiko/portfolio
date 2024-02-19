@@ -120,10 +120,14 @@ body {
    }
 }
 
-// Hero
+// Section
 @import "_hero.scss";
-
 @import "_products.scss";
 @import "_blog.scss";
 @import "_popular.scss";
 @import "_testimonials.scss";
+
+// Footer
+@import "_footer.scss";
+
+

@@ -4,6 +4,14 @@
    line-height: lineHeight(38, 30);
    font-weight: 700;
    font-style: italic;
+
+	&--white {
+		color: $whiteColor;
+	}
+
+	&--big {
+		@include adaptiveValue("font-size", 30, 28);
+	}
 }
 
 .button {
