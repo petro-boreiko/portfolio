@@ -1,4 +1,17 @@
 .blog {
+   @media (min-width: toRem($tablet)) {
+      transform: translateX(10%);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 1s;
+
+      &.animation {
+         transition: all 1s;
+         transform: translateX(0);
+         opacity: 1;
+         visibility: visible;
+      }
+   }
    // .blog__container
    &__container {
       @media (min-width: toEm($tablet)) {
@@ -12,7 +25,7 @@
          flex: 0 0 52%;
          align-self: center;
          @include adaptiveValue(
-            "padding-right",
+            'padding-right',
             38,
             15,
             0,
@@ -29,16 +42,23 @@
    }
    // .blog__images
    &__images {
-		& > *:not(:last-child) {
-			margin-bottom: toRem(15);
-		}
+      & > *:not(:last-child) {
+         margin-bottom: toRem(15);
+      }
 
-		@media (min-width: toEm($mobileSmall)) {
-			margin-bottom: 0;
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			@include adaptiveValue("column-gap", 22, 15, 0, $containerWidth, $tablet);
-		}
+      @media (min-width: toEm($mobileSmall)) {
+         margin-bottom: 0;
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         @include adaptiveValue(
+            'column-gap',
+            22,
+            15,
+            0,
+            $containerWidth,
+            $tablet
+         );
+      }
 
       @media (min-width: toEm($tablet)) {
          flex: 0 0 48%;
@@ -46,7 +66,7 @@
    }
    // .blog__img
    &__img {
-		border-radius: toRem(5);
+      border-radius: toRem(5);
       aspect-ratio: 1 / 1.1;
 
       width: 100%;

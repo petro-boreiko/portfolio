@@ -159,3 +159,41 @@ if (testimonialsSlider) {
 }
 
 // ! Slider end
+
+// !Animations
+let options = {
+   threshold: 0.3,
+};
+
+let optionTreshold = options.threshold;
+console.log(optionTreshold);
+
+let callback = (entries, observerAnim) => {
+   entries.forEach((entry) => {
+      const targetElement = entry.target;
+
+      if (entry.isIntersecting) {
+         targetElement.classList.add("animation");
+      } else {
+         targetElement.classList.remove("animation");
+      }
+
+		const dataTrheshold = parseFloat(targetElement.dataset.thre);
+
+      if (dataTrheshold) {
+			optionTreshold = dataTrheshold;
+      }
+   });
+};
+
+console.log(optionTreshold);
+
+
+const observerAnim = new IntersectionObserver(callback, options);
+
+let someElements = document.querySelectorAll("[data-anim]");
+
+
+someElements.forEach((someElement) => {
+	 observerAnim.observe(someElement);
+});

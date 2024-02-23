@@ -1,14 +1,28 @@
 .footer {
    padding-top: toRem(46);
    padding-bottom: toRem(34);
-   font-family: "DM Sans";
+   font-family: 'DM Sans';
    color: $lightColor;
    background-color: $darkColor;
+
+   @media (min-width: toRem($tablet)) {
+      transform: translate(0, toRem(150));
+      opacity: 0;
+      visibility: hidden;
+      transition: all 1s;
+
+      &.animation {
+         transition: all 1s;
+         transform: translate(0);
+         opacity: 1;
+         visibility: visible;
+      }
+   }
 
    // .footer__container
    &__container {
       &:not(:last-child) {
-         @include adaptiveValue("margin-bottom", 52, 30);
+         @include adaptiveValue('margin-bottom', 52, 30);
       }
    }
    // .footer__main
@@ -27,7 +41,7 @@
    row-gap: toRem(20);
 
    flex-wrap: wrap;
-   @include adaptiveValue("column-gap", 160, 20, 0, $containerWidth, $tablet);
+   @include adaptiveValue('column-gap', 160, 20, 0, $containerWidth, $tablet);
    row-gap: toRem(25);
 
    @media (min-width: toEm($tablet)) {
@@ -60,7 +74,7 @@
 
       &:not(:last-child) {
          @include adaptiveValue(
-            "margin-bottom",
+            'margin-bottom',
             33,
             20,
             0,
@@ -113,7 +127,7 @@
 
    @media (min-width: toEm($tablet)) {
       @include adaptiveValue(
-         "column-gap",
+         'column-gap',
          120,
          30,
          0,
@@ -134,7 +148,7 @@
       color: $whiteColor;
 
       &:not(:last-child) {
-         @include adaptiveValue("margin-bottom", 24, 12);
+         @include adaptiveValue('margin-bottom', 24, 12);
       }
 
       @media (min-width: toEm($tablet)) {
@@ -144,7 +158,7 @@
    // .nav-footer__list
    &__list {
       display: grid;
-      @include adaptiveValue("gap", 24, 8);
+      @include adaptiveValue('gap', 24, 8);
    }
    // .nav-footer__link
    &__link {
@@ -188,7 +202,7 @@
    &__items {
       display: flex;
       flex-wrap: wrap;
-      @include adaptiveValue("column-gap", 53, 20);
+      @include adaptiveValue('column-gap', 53, 20);
 
       @media (max-width: toEm($mobileSmall)) {
          justify-content: center;

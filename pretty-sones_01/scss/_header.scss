@@ -7,10 +7,24 @@
    z-index: 50;
    border-bottom: toRem(1) solid #83838336;
 
+   @media (min-width: toRem($tablet)) {
+      transform: translate(-10%, -20%);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 1s;
+
+      &.animation {
+         transition: all 1s;
+         transform: translate(0);
+         opacity: 1;
+         visibility: visible;
+      }
+   }
+
    // .header__container
    &__container {
       @include adaptiveValue(
-         "min-height",
+         'min-height',
          106,
          70,
          0,
@@ -46,7 +60,7 @@
 }
 
 .menu {
-   font-family: "Merriweather";
+   font-family: 'Merriweather';
 
    // .menu__body
    &__body {
@@ -63,7 +77,7 @@
          transition: all 0.3s;
 
          &::before {
-            content: "";
+            content: '';
             width: 100%;
             min-height: toRem(70);
             background-color: #fad2b1;
@@ -85,7 +99,7 @@
          align-items: center;
 
          @include adaptiveValue(
-            "column-gap",
+            'column-gap',
             36,
             20,
             0,
@@ -145,7 +159,7 @@
       span,
       &::after,
       &::before {
-         content: "";
+         content: '';
          width: toRem(30);
          height: toRem(3);
          background-color: $bgColor;

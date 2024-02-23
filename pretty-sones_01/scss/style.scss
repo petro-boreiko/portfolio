@@ -1,15 +1,15 @@
-@use "sass:math";
+@use 'sass:math';
 
-@import "_fonts.scss";
-@import "_reset.scss";
-@import "_variables.scss";
-@import "_functions.scss";
-@import "_common.scss";
+@import '_fonts.scss';
+@import '_reset.scss';
+@import '_variables.scss';
+@import '_functions.scss';
+@import '_common.scss';
 
 body {
    font-size: toRem(20);
    color: $mainColor;
-   font-family: "Inter";
+   font-family: 'Inter';
    background-color: $bgColor;
 }
 
@@ -24,21 +24,21 @@ body {
    }
 }
 
-[class*="__container"] {
+[class*='__container'] {
    max-width: #{$containerWidth}px;
    padding: 0 15px;
    margin: 0 auto;
 }
 
 // Header
-@import "_header.scss";
+@import '_header.scss';
 
 // Sections
 .page {
    // .page__hero
    &__hero {
       @include adaptiveValue(
-         "padding-top",
+         'padding-top',
          206,
          95,
          0,
@@ -46,7 +46,7 @@ body {
          $tablet
       );
       @include adaptiveValue(
-         "padding-bottom",
+         'padding-bottom',
          140,
          40,
          0,
@@ -62,7 +62,7 @@ body {
    // .page__blog
    &__blog {
       @include adaptiveValue(
-         "padding-top",
+         'padding-top',
          140,
          40,
          0,
@@ -70,7 +70,7 @@ body {
          $tablet
       );
       @include adaptiveValue(
-         "padding-bottom",
+         'padding-bottom',
          70,
          20,
          0,
@@ -82,7 +82,7 @@ body {
    // .page__popular
    &__popular {
       @include adaptiveValue(
-         "padding-top",
+         'padding-top',
          70,
          20,
          0,
@@ -90,7 +90,7 @@ body {
          $tablet
       );
       @include adaptiveValue(
-         "padding-bottom",
+         'padding-bottom',
          70,
          20,
          0,
@@ -102,7 +102,7 @@ body {
    // .page__testimonials
    &__testimonials {
       @include adaptiveValue(
-         "padding-top",
+         'padding-top',
          70,
          20,
          0,
@@ -110,7 +110,7 @@ body {
          $tablet
       );
       @include adaptiveValue(
-         "padding-bottom",
+         'padding-bottom',
          120,
          40,
          0,
@@ -121,13 +121,11 @@ body {
 }
 
 // Section
-@import "_hero.scss";
-@import "_products.scss";
-@import "_blog.scss";
-@import "_popular.scss";
-@import "_testimonials.scss";
+@import '_hero.scss';
+@import '_products.scss';
+@import '_blog.scss';
+@import '_popular.scss';
+@import '_testimonials.scss';
 
 // Footer
-@import "_footer.scss";
-
-
+@import '_footer.scss';

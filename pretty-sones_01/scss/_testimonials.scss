@@ -1,9 +1,23 @@
 .testimonials {
+   @media (min-width: toRem($tablet)) {
+      transform: translateX(10%);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 1s;
+
+      &.animation {
+         transition: all 1s;
+         transform: translateX(0);
+         opacity: 1;
+         visibility: visible;
+      }
+   }
+
    // .testimonials__container
    &__container {
       .block-header {
          &:not(:last-child) {
-            @include adaptiveValue("margin-bottom", 93, 20);
+            @include adaptiveValue('margin-bottom', 93, 20);
          }
       }
    }
@@ -19,7 +33,7 @@
    // .testimonials__pages
    &__pages.swiper-pagination-bullets.swiper-pagination-horizontal {
       @include adaptiveValue(
-         "padding-top",
+         'padding-top',
          56,
          25,
          0,
@@ -31,28 +45,28 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-		gap: toRem(10);
+      gap: toRem(10);
 
       .swiper-pagination-bullet {
-			margin: 0;
+         margin: 0;
          flex: 0 0 toRem(8);
          width: toRem(8);
          height: toRem(8);
-			background-color: #d8d8d8;
-			opacity: 1;
+         background-color: #d8d8d8;
+         opacity: 1;
       }
 
-		.swiper-pagination-bullet-active {
-			background-color: $darkColor;
-			opacity: 1;
-		}
+      .swiper-pagination-bullet-active {
+         background-color: $darkColor;
+         opacity: 1;
+      }
    }
 }
 
 .slide-testimonials {
    height: auto;
    border: toRem(1) solid #d8d8d8;
-   @include adaptiveValue("padding", 48, 15);
+   @include adaptiveValue('padding', 48, 15);
    border-radius: toRem(12);
    color: #323232;
 
@@ -75,8 +89,8 @@
 
    // .slide-testimonials__comment
    &__comment {
-      @include adaptiveValue("font-size", 18, 16);
-      @include adaptiveValue("line-height", 32, 25);
+      @include adaptiveValue('font-size', 18, 16);
+      @include adaptiveValue('line-height', 32, 25);
       color: #646464;
 
       &:not(:last-child) {

@@ -1,9 +1,23 @@
 .products {
+   @media (min-width: toRem($tablet)) {
+      transform: translateX(-10%);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 1s;
+
+      &.animation {
+         transition: all 1s;
+         transform: translateX(0);
+         opacity: 1;
+         visibility: visible;
+      }
+   }
+
    background-color: $darkColor;
    // .products__container
    &__container {
       @include adaptiveValue(
-         "padding-top",
+         'padding-top',
          94,
          40,
          0,
@@ -11,7 +25,7 @@
          $tablet
       );
       @include adaptiveValue(
-         "padding-bottom",
+         'padding-bottom',
          94,
          40,
          0,
@@ -21,7 +35,7 @@
 
       .block-header {
          &:not(:last-child) {
-            @include adaptiveValue("margin-bottom", 33, 20);
+            @include adaptiveValue('margin-bottom', 33, 20);
          }
       }
    }
@@ -37,12 +51,12 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      @include adaptiveValue("column-gap", 41, 20);
+      @include adaptiveValue('column-gap', 41, 20);
       row-gap: toRem(10);
-      font-family: "Raleway";
+      font-family: 'Raleway';
 
       &:not(:last-child) {
-         @include adaptiveValue("margin-bottom", 77, 25);
+         @include adaptiveValue('margin-bottom', 77, 25);
       }
    }
    // .tabs-products__item
@@ -77,7 +91,7 @@
 .cards-products {
    display: grid;
    grid-template-columns: repeat(auto-fill, minmax(toRem(230), 1fr));
-   @include adaptiveValue("column-gap", 30, 20, 0, $containerWidth, $tablet);
+   @include adaptiveValue('column-gap', 30, 20, 0, $containerWidth, $tablet);
    row-gap: toRem(25);
 
    @media (min-width: toEm($tablet)) {
@@ -89,4 +103,3 @@
       // justify-content: center;
    }
 }
-

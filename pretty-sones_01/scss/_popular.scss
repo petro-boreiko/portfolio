@@ -1,11 +1,24 @@
 .popular {
+   @media (min-width: toRem($tablet)) {
+      transform: translateX(-10%);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 1s;
+
+      &.animation {
+         transition: all 1s;
+         transform: translateX(0);
+         opacity: 1;
+         visibility: visible;
+      }
+   }
    // .popular__container
    &__container {
    }
    // .popular__top
    &__top {
       &:not(:last-child) {
-         @include adaptiveValue("margin-bottom", 128, 30);
+         @include adaptiveValue('margin-bottom', 128, 30);
       }
    }
    // .popular__content
@@ -14,7 +27,7 @@
          display: flex;
          align-items: flex-start;
          @include adaptiveValue(
-            "column-gap",
+            'column-gap',
             30,
             15,
             0,
@@ -50,8 +63,8 @@
    // .popular__items
    &__items {
       display: grid;
-      @include adaptiveValue("column-gap", 30, 20, 0, $containerWidth, $tablet);
-      @include adaptiveValue("row-gap", 47, 20, 0, $containerWidth, $tablet);
+      @include adaptiveValue('column-gap', 30, 20, 0, $containerWidth, $tablet);
+      @include adaptiveValue('row-gap', 47, 20, 0, $containerWidth, $tablet);
       grid-template-columns: repeat(auto-fill, minmax(toRem(230), 1fr));
 
       @media (min-width: toEm($tablet)) {
