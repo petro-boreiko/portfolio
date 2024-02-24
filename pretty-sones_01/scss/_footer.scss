@@ -1,11 +1,12 @@
 .footer {
-   padding-top: toRem(46);
+	padding-top: toRem(80);
    padding-bottom: toRem(34);
    font-family: 'DM Sans';
    color: $lightColor;
    background-color: $darkColor;
 
    @media (min-width: toRem($tablet)) {
+      padding-top: toRem(46);
       transform: translate(0, toRem(150));
       opacity: 0;
       visibility: hidden;

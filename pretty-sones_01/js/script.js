@@ -12,6 +12,7 @@ function clickEvents(e) {
    if (targetElement.closest('.menu__link')) {
       document.documentElement.classList.remove('menu-open')
    }
+
 }
 
 // ?Функція для переносу елементу
@@ -201,34 +202,34 @@ someElements.forEach((someElement) => {
 
 // !Active menu element on scroll
 
-if (window.matchMedia('(min-width: 992px)').matches) {
-   // Get all sections that have an ID defined
-   const sections = document.querySelectorAll('section[id], footer[id]')
+// Get all sections that have an ID defined
+const sections = document.querySelectorAll(
+   'section[id], footer[id]'
+)
 
-   // Add an event listener listening for scroll
-   window.addEventListener('scroll', navHighlighter)
+// Add an event listener listening for scroll
+window.addEventListener('scroll', navHighlighter)
 
-   function navHighlighter() {
-      // Get current scroll position
-      let scrollY = window.scrollY
+function navHighlighter() {
+   // Get current scroll position
+   let scrollY = window.scrollY
 
-      // Now we loop through sections to get height, top and ID values for each
-      sections.forEach((current) => {
-         const sectionHeight = current.offsetHeight
+   // Now we loop through sections to get height, top and ID values for each
+   sections.forEach((current) => {
+      const sectionHeight = current.offsetHeight
 
-         const sectionTop = current.offsetTop - 400
+      const sectionTop = current.offsetTop - 450
 
-         const sectionId = current.getAttribute('id')
+      const sectionId = current.getAttribute('id')
 
-         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document
-               .querySelector('.menu__body ul li a[href*=' + sectionId + ']')
-               .classList.add('active')
-         } else {
-            document
-               .querySelector('.menu__body ul li a[href*=' + sectionId + ']')
-               .classList.remove('active')
-         }
-      })
-   }
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+         document
+            .querySelector('.menu__body ul li a[href*=' + sectionId + ']')
+            .classList.add('active')
+      } else {
+         document
+            .querySelector('.menu__body ul li a[href*=' + sectionId + ']')
+            .classList.remove('active')
+      }
+   })
 }

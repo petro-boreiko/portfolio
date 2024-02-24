@@ -40,13 +40,12 @@ body {
       @include adaptiveValue(
          'padding-top',
          206,
-         85
+         85,
+         0,
+         $containerWidth,
+         $tablet
       );
-      @include adaptiveValue(
-         'padding-bottom',
-         140,
-         40
-      );
+      @include adaptiveValue('padding-bottom', 140, 40);
    }
 
    // .page__products
@@ -58,12 +57,10 @@ body {
       @include adaptiveValue(
          'padding-top',
          140,
-         40
-      );
-      @include adaptiveValue(
-         'padding-bottom',
-         30,
-         10
+         80,
+         0,
+         $containerWidth,
+         $tablet
       );
    }
 
@@ -71,13 +68,11 @@ body {
    &__popular {
       @include adaptiveValue(
          'padding-top',
-         100,
-         30
-      );
-      @include adaptiveValue(
-         'padding-bottom',
-         30,
-         10
+         140,
+         80,
+         0,
+         $containerWidth,
+         $tablet
       );
    }
 
@@ -85,14 +80,13 @@ body {
    &__testimonials {
       @include adaptiveValue(
          'padding-top',
-         110,
-         40
+         140,
+         80,
+         0,
+         $containerWidth,
+         $tablet
       );
-      @include adaptiveValue(
-         'padding-bottom',
-         120,
-         40
-      );
+      @include adaptiveValue('padding-bottom', 120, 40);
    }
 }
 
