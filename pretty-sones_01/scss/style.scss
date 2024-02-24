@@ -40,18 +40,12 @@ body {
       @include adaptiveValue(
          'padding-top',
          206,
-         95,
-         0,
-         $containerWidth,
-         $tablet
+         85
       );
       @include adaptiveValue(
          'padding-bottom',
          140,
-         40,
-         0,
-         $containerWidth,
-         $tablet
+         40
       );
    }
 
@@ -64,18 +58,12 @@ body {
       @include adaptiveValue(
          'padding-top',
          140,
-         40,
-         0,
-         $containerWidth,
-         $tablet
+         40
       );
       @include adaptiveValue(
          'padding-bottom',
-         70,
-         20,
-         0,
-         $containerWidth,
-         $tablet
+         30,
+         10
       );
    }
 
@@ -83,19 +71,13 @@ body {
    &__popular {
       @include adaptiveValue(
          'padding-top',
-         70,
-         20,
-         0,
-         $containerWidth,
-         $tablet
+         100,
+         30
       );
       @include adaptiveValue(
          'padding-bottom',
-         70,
-         20,
-         0,
-         $containerWidth,
-         $tablet
+         30,
+         10
       );
    }
 
@@ -103,19 +85,13 @@ body {
    &__testimonials {
       @include adaptiveValue(
          'padding-top',
-         70,
-         20,
-         0,
-         $containerWidth,
-         $tablet
+         110,
+         40
       );
       @include adaptiveValue(
          'padding-bottom',
          120,
-         40,
-         0,
-         $containerWidth,
-         $tablet
+         40
       );
    }
 }

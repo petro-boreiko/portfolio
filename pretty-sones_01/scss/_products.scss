@@ -19,10 +19,7 @@
       @include adaptiveValue(
          'padding-top',
          94,
-         40,
-         0,
-         $containerWidth,
-         $tablet
+         40
       );
       @include adaptiveValue(
          'padding-bottom',

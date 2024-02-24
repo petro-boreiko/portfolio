@@ -126,21 +126,26 @@
       font-size: toRem(30);
       display: block;
 
+      &.active {
+         font-weight: 700;
+         text-decoration: underline;
+      }
+
       @media (min-width: toEm($tablet)) {
          font-size: toRem(20);
 
          @media (any-hover: hover) {
-            &:hover:not(&--active) {
+            &:hover:not(.active) {
                color: $orangeColor;
             }
          }
-
-         &--active {
-            font-weight: 700;
-            text-decoration: underline;
-         }
       }
    }
+}
+
+.active {
+   font-weight: 700;
+   text-decoration: underline;
 }
 
 .icon-menu {
