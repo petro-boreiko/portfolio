@@ -591,13 +591,16 @@ body {
   margin: 0 auto
 }
 .activity__video {
-  display: flex;
-  aspect-ratio: 1180/650;
+  padding-bottom: 49.360146%;
   border: .125rem solid #d10ed1;
+  position: relative;
   border-radius: 1.5rem;
   overflow: hidden
 }
 .activity__video video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
