@@ -384,7 +384,7 @@ body {
   transition: transform .3s,-webkit-transform .3s
 }
 .page__hero {
-  padding-top: 6.25rem
+  padding-top: 3.125rem
 }
 .page__about-us {
   padding-top: 1.25rem
@@ -421,7 +421,7 @@ body {
   flex-wrap: wrap
 }
 .hero__wrap-img {
-  aspect-ratio: 290/100;
+  aspect-ratio: 290/200;
   position: relative
 }
 .hero__wrap-img::before {
