@@ -421,7 +421,6 @@ body {
   flex-wrap: wrap
 }
 .hero__wrap-img {
-  aspect-ratio: 886/896;
   position: relative
 }
 .hero__wrap-img::before {
@@ -447,6 +446,9 @@ body {
   filter: blur(2.5rem);
   background: #000;
   z-index: 2
+}
+.hero__image {
+  aspect-ratio: 1/1
 }
 @-webkit-keyframes anim-desigin {
   0% {
@@ -727,6 +729,9 @@ body {
   }
   .hero__wrap-img {
     flex: 1 0 50%
+  }
+  .hero__image {
+    aspect-ratio: 886/896
   }
   .counters-hero {
     display: flex;
@@ -1181,8 +1186,8 @@ body {
     right: -35%
   }
   .hero__image--scale {
-    -webkit-transform: scale(.85);
-    transform: scale(.85)
+    -webkit-transform: scale(.9);
+    transform: scale(.9)
   }
   .counters-hero__item--center {
     top: -20%;
