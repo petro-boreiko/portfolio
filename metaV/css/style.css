@@ -287,9 +287,6 @@ body {
   z-index: 50;
   background-color: hsla(0,0%,0%,.06)
 }
-.header._header-scroll {
-  background-color: rgba(0,0,0,.7)
-}
 .header__container {
   padding-top: .3125rem;
   padding-bottom: .3125rem;
@@ -753,6 +750,9 @@ body {
   }
 }
 @media (min-width:61.99875em) {
+  .header._header-scroll {
+    background-color: rgba(0,0,0,.7)
+  }
   .footer__container {
     flex-direction: row;
     justify-content: space-between;
