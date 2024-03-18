@@ -421,7 +421,7 @@ body {
   flex-wrap: wrap
 }
 .hero__wrap-img {
-  aspect-ratio: 290/200;
+  aspect-ratio: 2/1.7;
   position: relative
 }
 .hero__wrap-img::before {
@@ -1182,8 +1182,8 @@ body {
     right: -35%
   }
   .hero__image--scale {
-    padding-right: 2.8125rem;
-    padding-left: 2.8125rem
+    padding-right: 1.875rem;
+    padding-left: .9375rem
   }
   .counters-hero__item--center {
     top: -20%;
