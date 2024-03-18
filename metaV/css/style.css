@@ -421,7 +421,7 @@ body {
   flex-wrap: wrap
 }
 .hero__wrap-img {
-  aspect-ratio: 290/200;
+  aspect-ratio: 886/896;
   position: relative
 }
 .hero__wrap-img::before {
@@ -726,8 +726,7 @@ body {
     background: url(../img/hero/hero-stars.png) .625rem 22%/4rem 4.5625rem no-repeat
   }
   .hero__wrap-img {
-    flex: 1 0 50%;
-    aspect-ratio: 886/896
+    flex: 1 0 50%
   }
   .counters-hero {
     display: flex;
