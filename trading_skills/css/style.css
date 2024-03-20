@@ -209,7 +209,7 @@ body {
 }
 @media (min-width:29.99875em) {
   .about-us__card {
-    flex: 1 1 22.5rem
+    flex-basis: 22.5rem
   }
 }
 @media (min-width:47.99875em) {
@@ -254,7 +254,7 @@ body {
 }
 @media (min-width:84.375em) {
   .about-us__card {
-    flex: 1 1 40.625rem
+    flex-basis: 40.625rem
   }
 }
 @media (min-width:116.875em) {
@@ -333,7 +333,7 @@ body {
 }
 @media (min-width:75em) {
   .about-us__card {
-    flex: 1 1 28.125rem
+    flex-basis: 28.125rem
   }
 }
 @media (max-width:62em) {
