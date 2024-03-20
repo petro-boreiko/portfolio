@@ -252,7 +252,7 @@ body {
     grid-template-columns: repeat(auto-fill,minmax(36.875rem,1fr))
   }
 }
-@media (min-width:87.5em) {
+@media (min-width:84.375em) {
   .about-us__card {
     flex: 1 1 40.625rem
   }
