@@ -655,9 +655,6 @@ textarea.input {
     gap: .625rem
   }
   .opportunities__content {
-    padding-top: .9375rem
-  }
-  .opportunities__content {
     padding-bottom: .625rem
   }
   .opportunities__items {
@@ -747,6 +744,9 @@ textarea.input {
   }
   .opportunities__content {
     padding: .0000000625rem
+  }
+  .opportunities__content {
+    padding-top: .9375rem
   }
   .call-back__body {
     padding: .0000000625rem
@@ -936,16 +936,6 @@ textarea.input {
     .about-us__container,
     .why__items {
       gap: calc(.625rem + 1.875 * (100vw - 20rem)/ 96.875)
-    }
-  }
-  @supports (padding-top:clamp(0.9375rem ,0.4858870968rem + 2.2580645161vw ,3.125rem)) {
-    .opportunities__content {
-      padding-top: clamp(.9375rem ,.4858870968rem + 2.2580645161vw ,3.125rem)
-    }
-  }
-  @supports not (padding-top:clamp(0.9375rem ,0.4858870968rem + 2.2580645161vw ,3.125rem)) {
-    .opportunities__content {
-      padding-top: calc(.9375rem + 2.1875 * (100vw - 20rem)/ 96.875)
     }
   }
   @supports (padding-bottom:clamp(0.625rem ,0.2379032258rem + 1.935483871vw ,2.5rem)) {
@@ -1210,6 +1200,16 @@ textarea.input {
   @supports not (padding:clamp(0.0000000625rem ,-1.7422096542rem + 3.6296980999vw ,2.5rem)) {
     .opportunities__content {
       padding: calc(.0000000625rem + 2.4999999375 * (100vw - 47.99875rem)/ 68.87625)
+    }
+  }
+  @supports (padding-top:clamp(0.9375rem ,-0.5869335402rem + 3.1759859168vw ,3.125rem)) {
+    .opportunities__content {
+      padding-top: clamp(.9375rem ,-.5869335402rem + 3.1759859168vw ,3.125rem)
+    }
+  }
+  @supports not (padding-top:clamp(0.9375rem ,-0.5869335402rem + 3.1759859168vw ,3.125rem)) {
+    .opportunities__content {
+      padding-top: calc(.9375rem + 2.1875 * (100vw - 47.99875rem)/ 68.87625)
     }
   }
   @supports (padding:clamp(0.0000000625rem ,-1.7422096542rem + 3.6296980999vw ,2.5rem)) {
