@@ -309,7 +309,8 @@ textarea.input {
 }
 .form-call-back__item {
   flex: 1 0 60%;
-  background: linear-gradient(198.78deg,#12161c 35%,rgba(3,119,255,.25) 100%)
+  background: linear-gradient(198.78deg,#12161c 35%,rgba(3,119,255,.25) 100%);
+  transition: opacity .3s
 }
 .form-call-back__item--textarea textarea {
   padding: 0 .3125rem
@@ -1261,6 +1262,9 @@ textarea.input {
   }
   .content-contact-us a:hover {
     text-decoration: underline
+  }
+  .form-call-back__item:hover {
+    opacity: .7
   }
   .form-call-back__button:hover {
     color: #fff
