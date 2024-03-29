@@ -161,6 +161,55 @@ h6 {
   margin: 0 auto;
   padding: 0 .9375rem
 }
+input[type=email],
+input[type=tel],
+input[type=text],
+textarea {
+  -webkit-appearance: none;
+  appearance: none
+}
+.input {
+  color: #1d1e22;
+  border-radius: 0!important;
+  width: 100%;
+  display: block;
+  caret-color: inherit
+}
+.input[placeholder]:not([data-placeholder-nohiden])::-webkit-input-placeholder {
+  color: #1d1e22;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s
+}
+.input[placeholder]:not([data-placeholder-nohiden]):-ms-input-placeholder {
+  color: #1d1e22;
+  -ms-transition: opacity .3s;
+  transition: opacity .3s
+}
+.input[placeholder]:not([data-placeholder-nohiden])::-ms-input-placeholder {
+  color: #1d1e22;
+  -ms-transition: opacity .3s;
+  transition: opacity .3s
+}
+.input[placeholder]:not([data-placeholder-nohiden])::placeholder {
+  color: #1d1e22;
+  transition: opacity .3s
+}
+.input[placeholder]:not([data-placeholder-nohiden]):focus::-webkit-input-placeholder {
+  opacity: 0
+}
+.input[placeholder]:not([data-placeholder-nohiden]):focus:-ms-input-placeholder {
+  opacity: 0
+}
+.input[placeholder]:not([data-placeholder-nohiden]):focus::-ms-input-placeholder {
+  opacity: 0
+}
+.input[placeholder]:not([data-placeholder-nohiden]):focus::placeholder {
+  opacity: 0
+}
+textarea.input {
+  resize: none;
+  padding: 0 0
+}
 .menu__list {
   display: flex;
   flex-direction: column;
@@ -168,7 +217,19 @@ h6 {
 }
 .menu__link {
   font-size: 1.125rem;
-  line-height: 1.2222222222
+  line-height: 1.2222222222;
+  overflow: hidden
+}
+.menu__link::after {
+  content: "";
+  display: block;
+  height: .125rem;
+  width: 0;
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  background-color: #52ffe0;
+  transition: all .4s
 }
 .icon-menu {
   display: none
@@ -236,8 +297,21 @@ h6 {
   font-family: "Monument Extended";
   line-height: 1.2
 }
+.logo {
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s,-webkit-transform .3s
+}
 .logo img {
   width: 100%
+}
+.header {
+  background-color: #101010;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50
 }
 .header__container {
   padding-top: .625rem;
@@ -245,15 +319,94 @@ h6 {
   min-height: 8rem;
   display: flex;
   justify-content: space-between;
-  -webkit-column-gap: .9375rem;
-  -moz-column-gap: .9375rem;
-  column-gap: .9375rem;
+  -webkit-column-gap: 1.25rem;
+  -moz-column-gap: 1.25rem;
+  column-gap: 1.25rem;
   align-items: center
 }
 .header__logo {
   position: relative;
   z-index: 3;
   flex-shrink: 0
+}
+.footer {
+  background-color: #1d1e22
+}
+.footer__container {
+  padding-bottom: 1.875rem
+}
+.main-footer .logo {
+  display: none
+}
+.items-footer {
+  display: none
+}
+.items-footer__title {
+  font-family: "Monument Extended";
+  font-size: 1.125rem;
+  letter-spacing: 0
+}
+.items-footer__title:not(:last-child)._spoller-active {
+  margin-bottom: 1rem
+}
+.items-footer__list:not(:last-child) {
+  margin-bottom: .625rem
+}
+.items-footer__link a {
+  color: #dfe5f5;
+  font-size: 1rem;
+  line-height: 1.875;
+  transition: all .3s
+}
+.items-footer__link a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: .125rem;
+  position: relative;
+  left: 50%;
+  bottom: .3125rem;
+  background-color: #52ffe0;
+  transition: all .3s
+}
+.form {
+  background-color: #52ffe0;
+  border-radius: 1.875rem;
+  position: relative
+}
+.form__title {
+  color: #1d1e22;
+  font-family: "Monument Extended";
+  line-height: 1.2083333333;
+  letter-spacing: 4%
+}
+.form__title:not(:last-child) {
+  margin-bottom: .9375rem
+}
+.form__body {
+  border-bottom: solid .0625rem #3fc9b0;
+  padding-bottom: .8125rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-column-gap: 1.25rem;
+  -moz-column-gap: 1.25rem;
+  column-gap: 1.25rem
+}
+.form__body._form-error {
+  position: relative
+}
+.form__body._form-error .form__error {
+  position: absolute;
+  bottom: -1.25rem;
+  left: 0;
+  color: red
+}
+.form__send {
+  flex: 0 0 1.3125rem;
+  color: #1d1e22;
+  font-size: 1.375rem;
+  transition: color .3s
 }
 @media (min-width:47.99875em) {
   .menu__list {
@@ -264,12 +417,44 @@ h6 {
   .header .header__button {
     flex-shrink: 0
   }
+  .main-footer {
+    display: grid;
+    gap: 1.25rem
+  }
+  .main-footer .logo {
+    display: inline-block;
+    flex-shrink: 0
+  }
+  .items-footer {
+    display: grid;
+    gap: 1.25rem
+  }
 }
 @media (min-width:47.99875em) and (min-width:103.125em) {
   .menu__list {
     -webkit-column-gap: 2.5rem;
     -moz-column-gap: 2.5rem;
     column-gap: 2.5rem
+  }
+}
+@media (min-width:61.99875em) {
+  .main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-column-gap: 1.25rem;
+    -moz-column-gap: 1.25rem;
+    column-gap: 1.25rem
+  }
+  .main-footer__items {
+    flex-grow: 1;
+    flex-shrink: 0
+  }
+  .main-footer__form {
+    flex: 0 1 30.9375rem
+  }
+  .items-footer {
+    justify-content: center
   }
 }
 @media (min-width:103.125em) {
@@ -282,6 +467,54 @@ h6 {
   .logo {
     max-width: 9.375rem
   }
+  .footer__container {
+    padding-top: 3rem
+  }
+  .form {
+    padding: 5rem
+  }
+  .form {
+    padding-left: 3rem
+  }
+  .form {
+    padding-right: 3rem
+  }
+  .form__title {
+    font-size: 1.5rem
+  }
+}
+@media (min-width:75em) {
+  .items-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 1.25rem
+  }
+  .items-footer__title {
+    list-style: none
+  }
+  .items-footer__title:not(:last-child) {
+    margin-bottom: 1rem
+  }
+  .no-webp .form::after {
+    background: url(../img/decor/footer-decor.png) 0 0/100% repeat
+  }
+  .form::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 7.1875rem;
+    height: 5.1875rem;
+    bottom: -1.6875rem;
+    right: -1.3125rem
+  }
+}
+@media (min-width:75em) and (min-width:103.125em) {
+  .items-footer {
+    -webkit-column-gap: 7.5rem;
+    -moz-column-gap: 7.5rem;
+    column-gap: 7.5rem
+  }
 }
 @media (max-width:20em) {
   .title {
@@ -293,6 +526,23 @@ h6 {
   .logo {
     max-width: 6.25rem
   }
+  .footer__container {
+    padding-top: 2.5rem
+  }
+  .form {
+    padding: 3.125rem
+  }
+  .form__title {
+    font-size: 1.125rem
+  }
+}
+@media (max-width:61.99875em) {
+  .form {
+    padding-left: 1.25rem
+  }
+  .form {
+    padding-right: 1.25rem
+  }
 }
 @media (max-width:47.99875em) {
   .menu__body {
@@ -300,6 +550,7 @@ h6 {
     flex-direction: column;
     justify-content: space-between;
     gap: 1.875rem;
+    background-color: #1d1e22;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -447,8 +698,87 @@ h6 {
       max-width: calc(6.25rem + 3.125 * (100vw - 20rem)/ 83.125)
     }
   }
+  @supports (padding-top:clamp(2.5rem ,2.3796992481rem + 0.6015037594vw ,3rem)) {
+    .footer__container {
+      padding-top: clamp(2.5rem ,2.3796992481rem + .6015037594vw ,3rem)
+    }
+  }
+  @supports not (padding-top:clamp(2.5rem ,2.3796992481rem + 0.6015037594vw ,3rem)) {
+    .footer__container {
+      padding-top: calc(2.5rem + .5 * (100vw - 20rem)/ 83.125)
+    }
+  }
+  @supports (padding:clamp(3.125rem ,2.6738721805rem + 2.2556390977vw ,5rem)) {
+    .form {
+      padding: clamp(3.125rem ,2.6738721805rem + 2.2556390977vw ,5rem)
+    }
+  }
+  @supports not (padding:clamp(3.125rem ,2.6738721805rem + 2.2556390977vw ,5rem)) {
+    .form {
+      padding: calc(3.125rem + 1.875 * (100vw - 20rem)/ 83.125)
+    }
+  }
+  @supports (font-size:clamp(1.125rem ,1.0347744361rem + 0.4511278195vw ,1.5rem)) {
+    .form__title {
+      font-size: clamp(1.125rem ,1.0347744361rem + .4511278195vw ,1.5rem)
+    }
+  }
+  @supports not (font-size:clamp(1.125rem ,1.0347744361rem + 0.4511278195vw ,1.5rem)) {
+    .form__title {
+      font-size: calc(1.125rem + .375 * (100vw - 20rem)/ 83.125)
+    }
+  }
+}
+@media (min-width:75em) and (min-width:61.99875em) and (max-width:103.125em) {
+  @supports ((-moz-column-gap:clamp(1.5625rem ,-7.3884152457rem + 14.4372511474vw ,7.5rem)) or (column-gap:clamp(1.5625rem ,-7.3884152457rem + 14.4372511474vw ,7.5rem))) {
+    .items-footer {
+      -webkit-column-gap: clamp(1.5625rem ,-7.3884152457rem + 14.4372511474vw ,7.5rem);
+      -moz-column-gap: clamp(1.5625rem ,-7.3884152457rem + 14.4372511474vw ,7.5rem);
+      column-gap: clamp(1.5625rem ,-7.3884152457rem + 14.4372511474vw ,7.5rem)
+    }
+  }
+  @supports not ((-moz-column-gap:clamp(1.5625rem ,-7.3884152457rem + 14.4372511474vw ,7.5rem)) or (column-gap:clamp(1.5625rem ,-7.3884152457rem + 14.4372511474vw ,7.5rem))) {
+    .items-footer {
+      -webkit-column-gap: calc(1.5625rem + 5.9375 * (100vw - 61.99875rem)/ 41.12625);
+      -moz-column-gap: calc(1.5625rem + 5.9375 * (100vw - 61.99875rem)/ 41.12625);
+      column-gap: calc(1.5625rem + 5.9375 * (100vw - 61.99875rem)/ 41.12625)
+    }
+  }
+}
+@media (min-width:75em) and (max-width:61.99875em) {
+  .items-footer {
+    -webkit-column-gap: 1.5625rem;
+    -moz-column-gap: 1.5625rem;
+    column-gap: 1.5625rem
+  }
+}
+@media (min-width:61.99875em) and (max-width:103.125em) {
+  @supports (padding-left:clamp(1.25rem ,-1.3881644935rem + 4.2551898119vw ,3rem)) {
+    .form {
+      padding-left: clamp(1.25rem ,-1.3881644935rem + 4.2551898119vw ,3rem)
+    }
+  }
+  @supports not (padding-left:clamp(1.25rem ,-1.3881644935rem + 4.2551898119vw ,3rem)) {
+    .form {
+      padding-left: calc(1.25rem + 1.75 * (100vw - 61.99875rem)/ 41.12625)
+    }
+  }
+  @supports (padding-right:clamp(1.25rem ,-1.3881644935rem + 4.2551898119vw ,3rem)) {
+    .form {
+      padding-right: clamp(1.25rem ,-1.3881644935rem + 4.2551898119vw ,3rem)
+    }
+  }
+  @supports not (padding-right:clamp(1.25rem ,-1.3881644935rem + 4.2551898119vw ,3rem)) {
+    .form {
+      padding-right: calc(1.25rem + 1.75 * (100vw - 61.99875rem)/ 41.12625)
+    }
+  }
 }
 @media (any-hover:hover) {
+  .menu__link:hover::after {
+    width: 100%;
+    left: 0
+  }
   .button:hover {
     color: #fff;
     background-color: #2c2d31
@@ -461,5 +791,21 @@ h6 {
   .button--bg-dark:hover {
     background-color: #52ffe0;
     color: #2c2d31
+  }
+  .logo:hover {
+    -webkit-transform: scale(.95);
+    transform: scale(.95)
+  }
+  .items-footer__link a:hover::after {
+    left: 0;
+    width: 100%
+  }
+  .form__send:hover {
+    color: #96ada6
+  }
+}
+@media (min-width:75em) {
+  .webp .form::after {
+    background: url(../img/decor/footer-decor.webp) 0 0/100% repeat
   }
 }
