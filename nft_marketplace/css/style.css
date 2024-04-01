@@ -355,8 +355,7 @@ textarea.input {
 .items-footer__link a {
   color: #dfe5f5;
   font-size: 1rem;
-  line-height: 1.875;
-  transition: all .3s
+  line-height: 1.875
 }
 .items-footer__link a::after {
   content: "";
@@ -408,6 +407,89 @@ textarea.input {
   font-size: 1.375rem;
   transition: color .3s
 }
+.bottom-footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 2.1875rem;
+  color: #dfe5f5;
+  line-height: 1.875;
+  letter-spacing: 0
+}
+.info-bottom-footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  -webkit-column-gap: 1.25rem;
+  -moz-column-gap: 1.25rem;
+  column-gap: 1.25rem
+}
+.info-bottom-footer__item::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: .125rem;
+  position: relative;
+  left: 50%;
+  bottom: .1875rem;
+  background-color: #52ffe0;
+  transition: all .3s
+}
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: .625rem
+}
+.social__item {
+  color: #818698;
+  font-size: 1.3125rem;
+  transition: all .3s
+}
+.contact-footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex-wrap: wrap;
+  order: 1;
+  gap: 2.5rem
+}
+.contact-footer__title {
+  font-family: "Monument Extended";
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 0
+}
+.contact-footer__title:not(:last-child) {
+  margin-bottom: 1rem
+}
+.contact-footer__link {
+  display: block
+}
+.contact-footer__link:not(:last-child) {
+  margin-bottom: .25rem
+}
+@media (min-width:29.99875em) {
+  .info-bottom-footer {
+    flex-direction: row
+  }
+  .contact-footer {
+    width: 100%;
+    text-align: left;
+    flex-direction: row;
+    justify-content: space-between
+  }
+  .contact-footer__item--right {
+    text-align-last: right
+  }
+}
+@media (min-width:34.375em) {
+  .bottom-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap
+  }
+}
 @media (min-width:47.99875em) {
   .menu__list {
     flex-direction: row;
@@ -428,6 +510,9 @@ textarea.input {
   .items-footer {
     display: grid;
     gap: 1.25rem
+  }
+  .contact-footer {
+    display: none
   }
 }
 @media (min-width:47.99875em) and (min-width:103.125em) {
@@ -470,6 +555,9 @@ textarea.input {
   .footer__container {
     padding-top: 3rem
   }
+  .main-footer {
+    padding-bottom: 3.125rem
+  }
   .form {
     padding: 5rem
   }
@@ -481,6 +569,16 @@ textarea.input {
   }
   .form__title {
     font-size: 1.5rem
+  }
+  .bottom-footer {
+    -webkit-column-gap: 2.1875rem;
+    -moz-column-gap: 2.1875rem;
+    column-gap: 2.1875rem
+  }
+  .social {
+    -webkit-column-gap: 1.625rem;
+    -moz-column-gap: 1.625rem;
+    column-gap: 1.625rem
   }
 }
 @media (min-width:75em) {
@@ -529,11 +627,24 @@ textarea.input {
   .footer__container {
     padding-top: 2.5rem
   }
+  .main-footer {
+    padding-bottom: 1.875rem
+  }
   .form {
     padding: 3.125rem
   }
   .form__title {
     font-size: 1.125rem
+  }
+  .bottom-footer {
+    -webkit-column-gap: .9375rem;
+    -moz-column-gap: .9375rem;
+    column-gap: .9375rem
+  }
+  .social {
+    -webkit-column-gap: .9375rem;
+    -moz-column-gap: .9375rem;
+    column-gap: .9375rem
   }
 }
 @media (max-width:61.99875em) {
@@ -542,6 +653,17 @@ textarea.input {
   }
   .form {
     padding-right: 1.25rem
+  }
+  .bottom-footer__copyright {
+    order: 4;
+    flex-basis: 100%;
+    text-align: center
+  }
+  .bottom-footer__info {
+    order: 2
+  }
+  .bottom-footer__social {
+    order: 3
   }
 }
 @media (max-width:47.99875em) {
@@ -708,6 +830,16 @@ textarea.input {
       padding-top: calc(2.5rem + .5 * (100vw - 20rem)/ 83.125)
     }
   }
+  @supports (padding-bottom:clamp(1.875rem ,1.5742481203rem + 1.5037593985vw ,3.125rem)) {
+    .main-footer {
+      padding-bottom: clamp(1.875rem ,1.5742481203rem + 1.5037593985vw ,3.125rem)
+    }
+  }
+  @supports not (padding-bottom:clamp(1.875rem ,1.5742481203rem + 1.5037593985vw ,3.125rem)) {
+    .main-footer {
+      padding-bottom: calc(1.875rem + 1.25 * (100vw - 20rem)/ 83.125)
+    }
+  }
   @supports (padding:clamp(3.125rem ,2.6738721805rem + 2.2556390977vw ,5rem)) {
     .form {
       padding: clamp(3.125rem ,2.6738721805rem + 2.2556390977vw ,5rem)
@@ -726,6 +858,34 @@ textarea.input {
   @supports not (font-size:clamp(1.125rem ,1.0347744361rem + 0.4511278195vw ,1.5rem)) {
     .form__title {
       font-size: calc(1.125rem + .375 * (100vw - 20rem)/ 83.125)
+    }
+  }
+  @supports ((-moz-column-gap:clamp(0.9375rem ,0.6367481203rem + 1.5037593985vw ,2.1875rem)) or (column-gap:clamp(0.9375rem ,0.6367481203rem + 1.5037593985vw ,2.1875rem))) {
+    .bottom-footer {
+      -webkit-column-gap: clamp(.9375rem ,.6367481203rem + 1.5037593985vw ,2.1875rem);
+      -moz-column-gap: clamp(.9375rem ,.6367481203rem + 1.5037593985vw ,2.1875rem);
+      column-gap: clamp(.9375rem ,.6367481203rem + 1.5037593985vw ,2.1875rem)
+    }
+  }
+  @supports not ((-moz-column-gap:clamp(0.9375rem ,0.6367481203rem + 1.5037593985vw ,2.1875rem)) or (column-gap:clamp(0.9375rem ,0.6367481203rem + 1.5037593985vw ,2.1875rem))) {
+    .bottom-footer {
+      -webkit-column-gap: calc(.9375rem + 1.25 * (100vw - 20rem)/ 83.125);
+      -moz-column-gap: calc(.9375rem + 1.25 * (100vw - 20rem)/ 83.125);
+      column-gap: calc(.9375rem + 1.25 * (100vw - 20rem)/ 83.125)
+    }
+  }
+  @supports ((-moz-column-gap:clamp(0.9375rem ,0.7720864662rem + 0.8270676692vw ,1.625rem)) or (column-gap:clamp(0.9375rem ,0.7720864662rem + 0.8270676692vw ,1.625rem))) {
+    .social {
+      -webkit-column-gap: clamp(.9375rem ,.7720864662rem + .8270676692vw ,1.625rem);
+      -moz-column-gap: clamp(.9375rem ,.7720864662rem + .8270676692vw ,1.625rem);
+      column-gap: clamp(.9375rem ,.7720864662rem + .8270676692vw ,1.625rem)
+    }
+  }
+  @supports not ((-moz-column-gap:clamp(0.9375rem ,0.7720864662rem + 0.8270676692vw ,1.625rem)) or (column-gap:clamp(0.9375rem ,0.7720864662rem + 0.8270676692vw ,1.625rem))) {
+    .social {
+      -webkit-column-gap: calc(.9375rem + .6875 * (100vw - 20rem)/ 83.125);
+      -moz-column-gap: calc(.9375rem + .6875 * (100vw - 20rem)/ 83.125);
+      column-gap: calc(.9375rem + .6875 * (100vw - 20rem)/ 83.125)
     }
   }
 }
@@ -802,6 +962,15 @@ textarea.input {
   }
   .form__send:hover {
     color: #96ada6
+  }
+  .info-bottom-footer__item:hover::after {
+    left: 0;
+    width: 100%
+  }
+  .social__item:hover {
+    color: #52ffe0;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05)
   }
 }
 @media (min-width:75em) {
