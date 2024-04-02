@@ -469,6 +469,172 @@ textarea.input {
 .contact-footer__link:not(:last-child) {
   margin-bottom: .25rem
 }
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4.375rem;
+  align-items: center;
+  font-family: "Monument Extended"
+}
+.hero__content {
+  text-align: center
+}
+.hero__block-title {
+  letter-spacing: .0625rem
+}
+.hero__block-title:not(:last-child) {
+  margin-bottom: 3.75rem
+}
+.hero__lable {
+  line-height: 1.1944444444
+}
+.hero__lable:not(:last-child) {
+  margin-bottom: 1rem
+}
+.hero__title {
+  line-height: 1.1944444444;
+  text-transform: uppercase
+}
+.hero__title:not(:last-child) {
+  margin-bottom: 2rem
+}
+.hero__actions {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  row-gap: 5rem;
+  -webkit-column-gap: 4rem;
+  -moz-column-gap: 4rem;
+  column-gap: 4rem
+}
+.hero__button {
+  flex-shrink: 0
+}
+.hero__avatars {
+  position: relative
+}
+.hero__avatars img {
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 50%;
+  overflow: hidden
+}
+.hero__box-line {
+  width: 6.25rem;
+  height: 7.5rem;
+  position: absolute;
+  bottom: .9375rem;
+  right: -120%;
+  background: url(../img/hero/arrow-mobile.svg) 0 0/contain no-repeat
+}
+.counters {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem
+}
+.counters__item {
+  font-size: 1.875rem;
+  line-height: 1.2
+}
+.counters__numbers:not(:last-child) {
+  margin-bottom: .5rem
+}
+.counters__lable {
+  color: #818698;
+  font-family: "Red Rose";
+  font-size: 1rem;
+  line-height: 1.25;
+  letter-spacing: 2%
+}
+.counters__lable:not(:last-child) {
+  margin-bottom: .5rem
+}
+.images-hero {
+  aspect-ratio: 322/316;
+  position: relative
+}
+.images-hero::before {
+  content: "";
+  border-radius: 3.125rem;
+  background: linear-gradient(180deg,rgba(127,28,252,.5),rgba(89,220,220,.5) 100%);
+  -webkit-filter: blur(30px);
+  filter: blur(30px);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0
+}
+.images-hero__pictures {
+  border-radius: 3.125rem;
+  position: relative;
+  z-index: 1
+}
+.images-hero__button {
+  display: block;
+  position: absolute;
+  top: 100%;
+  right: 100%;
+  -webkit-transform: translate(50%,-100%);
+  transform: translate(50%,-100%);
+  width: 10.9375rem;
+  height: 10.9375rem;
+  border-radius: 50%;
+  background-color: rgba(60,61,68,.8431372549);
+  z-index: 3;
+  transition: background-color .3s
+}
+.images-hero__button span {
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s,-webkit-transform .5s;
+  font-size: 1.375rem;
+  color: #fff;
+  display: block
+}
+.images-hero__button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 7.5rem;
+  height: 100%;
+  display: block;
+  overflow: visible;
+  font-family: "Monument Extended";
+  letter-spacing: .0625rem;
+  word-spacing: .125rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 1.1875;
+  fill: #fff;
+  -webkit-animation: rotate 15s linear running infinite;
+  animation: rotate 15s linear running infinite
+}
+.images-hero__button .circle path {
+  fill: none
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: translate(-50%,-50%) rotate(0);
+    transform: translate(-50%,-50%) rotate(0)
+  }
+  100% {
+    -webkit-transform: translate(-50%,-50%) rotate(360deg);
+    transform: translate(-50%,-50%) rotate(360deg)
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: translate(-50%,-50%) rotate(0);
+    transform: translate(-50%,-50%) rotate(0)
+  }
+  100% {
+    -webkit-transform: translate(-50%,-50%) rotate(360deg);
+    transform: translate(-50%,-50%) rotate(360deg)
+  }
+}
 @media (min-width:29.99875em) {
   .info-bottom-footer {
     flex-direction: row
@@ -513,6 +679,51 @@ textarea.input {
   }
   .contact-footer {
     display: none
+  }
+  .page__hero {
+    padding-top: 11rem
+  }
+  .page__hero {
+    padding-bottom: 3.125rem
+  }
+  .hero__actions {
+    align-items: center;
+    flex-wrap: wrap
+  }
+  .hero__avatars {
+    flex-shrink: 0
+  }
+  .hero__avatars img:not(:first-child) {
+    margin-left: -1.4375rem
+  }
+  .hero__box-line {
+    width: 7.1875rem;
+    height: 7.5rem;
+    background: url(../img/hero/arrow.svg) 0 0/contain no-repeat;
+    top: 1.25rem;
+    right: -100%
+  }
+  .hero__counters {
+    flex: 1 0 100%
+  }
+  .counters {
+    flex-direction: row;
+    justify-content: center;
+    -webkit-column-gap: 11.875rem;
+    -moz-column-gap: 11.875rem;
+    column-gap: 11.875rem
+  }
+  .counters__lable {
+    text-align: center
+  }
+  .images-hero {
+    aspect-ratio: 775/778
+  }
+  .images-hero::before {
+    border-radius: 11.25rem
+  }
+  .images-hero__pictures {
+    border-radius: 11.25rem
   }
 }
 @media (min-width:47.99875em) and (min-width:103.125em) {
@@ -580,6 +791,12 @@ textarea.input {
     -moz-column-gap: 1.625rem;
     column-gap: 1.625rem
   }
+  .hero__lable {
+    font-size: 2.25rem
+  }
+  .hero__title {
+    font-size: 4.5rem
+  }
 }
 @media (min-width:75em) {
   .items-footer {
@@ -605,6 +822,21 @@ textarea.input {
     height: 5.1875rem;
     bottom: -1.6875rem;
     right: -1.3125rem
+  }
+  .hero__container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-column-gap: 6.25rem;
+    -moz-column-gap: 6.25rem;
+    column-gap: 6.25rem
+  }
+  .hero__content {
+    flex: 0 1 44rem;
+    text-align: left
+  }
+  .hero__wrap-image {
+    flex: 0 1 48.4375rem
   }
 }
 @media (min-width:75em) and (min-width:103.125em) {
@@ -646,6 +878,12 @@ textarea.input {
     -moz-column-gap: .9375rem;
     column-gap: .9375rem
   }
+  .page__hero {
+    padding-top: 8.125rem
+  }
+  .page__hero {
+    padding-bottom: 2.5rem
+  }
 }
 @media (max-width:61.99875em) {
   .form {
@@ -664,6 +902,9 @@ textarea.input {
   }
   .bottom-footer__social {
     order: 3
+  }
+  .images-hero__button {
+    display: none
   }
 }
 @media (max-width:47.99875em) {
@@ -759,6 +1000,18 @@ textarea.input {
   }
   .header .header__button {
     align-self: end
+  }
+  .hero__lable {
+    font-size: 1.125rem
+  }
+  .hero__title {
+    font-size: 1.875rem
+  }
+  .hero__avatars {
+    flex: 0 0 3.125rem
+  }
+  .hero__avatars img:not(:first-child) {
+    margin-top: -.875rem
   }
 }
 @media (max-width:47.99875em) and (any-hover:none) {
@@ -934,6 +1187,50 @@ textarea.input {
     }
   }
 }
+@media (min-width:20em) and (max-width:47.99875em) {
+  @supports (padding-top:clamp(8.125rem ,6.07133689rem + 10.2683155498vw ,11rem)) {
+    .page__hero {
+      padding-top: clamp(8.125rem ,6.07133689rem + 10.2683155498vw ,11rem)
+    }
+  }
+  @supports not (padding-top:clamp(8.125rem ,6.07133689rem + 10.2683155498vw ,11rem)) {
+    .page__hero {
+      padding-top: calc(8.125rem + 2.875 * (100vw - 20rem)/ 27.99875)
+    }
+  }
+  @supports (padding-bottom:clamp(2.5rem ,2.0535514978rem + 2.2322425108vw ,3.125rem)) {
+    .page__hero {
+      padding-bottom: clamp(2.5rem ,2.0535514978rem + 2.2322425108vw ,3.125rem)
+    }
+  }
+  @supports not (padding-bottom:clamp(2.5rem ,2.0535514978rem + 2.2322425108vw ,3.125rem)) {
+    .page__hero {
+      padding-bottom: calc(2.5rem + .625 * (100vw - 20rem)/ 27.99875)
+    }
+  }
+}
+@media (min-width:47.99875em) and (max-width:103.125em) {
+  @supports (font-size:clamp(1.125rem ,0.1454558854rem + 2.0407700506vw ,2.25rem)) {
+    .hero__lable {
+      font-size: clamp(1.125rem ,.1454558854rem + 2.0407700506vw ,2.25rem)
+    }
+  }
+  @supports not (font-size:clamp(1.125rem ,0.1454558854rem + 2.0407700506vw ,2.25rem)) {
+    .hero__lable {
+      font-size: calc(1.125rem + 1.125 * (100vw - 47.99875rem)/ 55.12625)
+    }
+  }
+  @supports (font-size:clamp(1.875rem ,-0.4106029342rem + 4.7617967847vw ,4.5rem)) {
+    .hero__title {
+      font-size: clamp(1.875rem ,-.4106029342rem + 4.7617967847vw ,4.5rem)
+    }
+  }
+  @supports not (font-size:clamp(1.875rem ,-0.4106029342rem + 4.7617967847vw ,4.5rem)) {
+    .hero__title {
+      font-size: calc(1.875rem + 2.625 * (100vw - 47.99875rem)/ 55.12625)
+    }
+  }
+}
 @media (any-hover:hover) {
   .menu__link:hover::after {
     width: 100%;
@@ -971,6 +1268,17 @@ textarea.input {
     color: #52ffe0;
     -webkit-transform: scale(1.05);
     transform: scale(1.05)
+  }
+  .images-hero__button:hover {
+    background-color: #13b899
+  }
+  .images-hero__button:hover span {
+    -webkit-transform: scale(1.6);
+    transform: scale(1.6)
+  }
+  .images-hero__button:hover .circle {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused
   }
 }
 @media (min-width:75em) {
