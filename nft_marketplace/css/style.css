@@ -841,7 +841,8 @@ textarea.input {
   .counters {
     -webkit-column-gap: 7.8125rem;
     -moz-column-gap: 7.8125rem;
-    column-gap: 7.8125rem
+    column-gap: 7.8125rem;
+    justify-content: flex-start
   }
 }
 @media (min-width:75em) and (min-width:103.125em) {
