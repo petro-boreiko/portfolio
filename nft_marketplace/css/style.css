@@ -530,6 +530,7 @@ textarea.input {
 .counters {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   row-gap: 2rem
 }
 .counters__item {
@@ -690,9 +691,6 @@ textarea.input {
     align-items: center;
     flex-wrap: wrap
   }
-  .hero__avatars {
-    flex-shrink: 0
-  }
   .hero__avatars img:not(:first-child) {
     margin-left: -1.4375rem
   }
@@ -708,7 +706,6 @@ textarea.input {
   }
   .counters {
     flex-direction: row;
-    justify-content: center;
     -webkit-column-gap: 11.875rem;
     -moz-column-gap: 11.875rem;
     column-gap: 11.875rem
@@ -835,8 +832,16 @@ textarea.input {
     flex: 0 1 44rem;
     text-align: left
   }
+  .hero__actions {
+    justify-content: flex-start
+  }
   .hero__wrap-image {
     flex: 0 1 48.4375rem
+  }
+  .counters {
+    -webkit-column-gap: 7.8125rem;
+    -moz-column-gap: 7.8125rem;
+    column-gap: 7.8125rem
   }
 }
 @media (min-width:75em) and (min-width:103.125em) {
