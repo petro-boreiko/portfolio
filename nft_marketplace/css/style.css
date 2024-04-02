@@ -520,11 +520,11 @@ textarea.input {
   overflow: hidden
 }
 .hero__box-line {
-  width: 6.25rem;
+  width: 6.875rem;
   height: 7.5rem;
   position: absolute;
-  bottom: .9375rem;
-  right: -120%;
+  bottom: 1.5625rem;
+  right: -4.0625rem;
   background: url(../img/hero/arrow-mobile.svg) 0 0/contain no-repeat
 }
 .counters {
@@ -699,7 +699,7 @@ textarea.input {
     height: 7.5rem;
     background: url(../img/hero/arrow.svg) 0 0/contain no-repeat;
     top: 1.25rem;
-    right: -100%
+    right: -7.8125rem
   }
   .hero__counters {
     flex: 1 0 100%
