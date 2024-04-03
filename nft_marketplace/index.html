@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240402174030">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240403151429">
 	<link rel="shortcut icon" href="./favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +34,7 @@
 			</div>
 		</header>
 		<main class="page">
-			<div class="page__hero hero">
+			<section class="page__hero hero">
 				<div class="hero__container">
 					<div class="hero__content">
 						<div class="hero__block-title">
@@ -97,7 +97,75 @@
 						</button>
 					</div>
 				</div>
-			</div>
+			</section>
+
+			<section class="page__popular popular">
+				<div class="popular__container">
+					<h2 class="popular__title title title--margin">popular categories</h2>
+
+					<div class="popular__body">
+						<!-- Оболонка слайдера -->
+						<div class="popular__slider swiper">
+							<!-- Частина слайдера, що рухається -->
+							<div class="popular__wrapper swiper-wrapper">
+								<!-- Слайд -->
+								<a href="#" class="popular__slide swiper-slide item-popular">
+									<picture><source srcset="img/popular/01.webp" type="image/webp"><img class="item-popular__img ibg" src="img/popular/01.png" alt="Image"></picture>
+
+									<div class="item-popular__lable">Games</div>
+								</a>
+								<a href="#" class="popular__slide swiper-slide item-popular">
+									<picture><source srcset="img/popular/02.webp" type="image/webp"><img class="item-popular__img ibg" src="img/popular/02.png" alt="Image"></picture>
+
+									<div class="item-popular__lable">Sports</div>
+								</a>
+								<a href="#" class="popular__slide swiper-slide item-popular">
+									<picture><source srcset="img/popular/03.webp" type="image/webp"><img class="item-popular__img ibg" src="img/popular/03.png" alt="Image"></picture>
+
+									<div class="item-popular__lable">Metaverse</div>
+								</a>
+								<a href="#" class="popular__slide swiper-slide item-popular">
+									<picture><source srcset="img/popular/04.webp" type="image/webp"><img class="item-popular__img ibg" src="img/popular/04.png" alt="Image"></picture>
+
+									<div class="item-popular__lable">Art</div>
+								</a>
+								<a href="#" class="popular__slide swiper-slide item-popular">
+									<picture><source srcset="img/popular/05.webp" type="image/webp"><img class="item-popular__img ibg" src="img/popular/05.png" alt="Image"></picture>
+
+									<div class="item-popular__lable">Music</div>
+								</a>
+								<a href="#" class="popular__slide swiper-slide item-popular">
+									<picture><source srcset="img/popular/06.webp" type="image/webp"><img class="item-popular__img ibg" src="img/popular/06.png" alt="Image"></picture>
+
+									<div class="item-popular__lable">Photography</div>
+								</a>
+								<a href="#" class="popular__slide swiper-slide item-popular">
+									<picture><source srcset="img/popular/04.webp" type="image/webp"><img class="item-popular__img ibg" src="img/popular/04.png" alt="Image"></picture>
+
+									<div class="item-popular__lable">Art</div>
+								</a>
+								<a href="#" class="popular__slide swiper-slide item-popular">
+									<picture><source srcset="img/popular/05.webp" type="image/webp"><img class="item-popular__img ibg" src="img/popular/05.png" alt="Image"></picture>
+
+									<div class="item-popular__lable">Music</div>
+								</a>
+								<a href="#" class="popular__slide swiper-slide item-popular">
+									<picture><source srcset="img/popular/06.webp" type="image/webp"><img class="item-popular__img ibg" src="img/popular/06.png" alt="Image"></picture>
+
+									<div class="item-popular__lable">Photography</div>
+								</a>
+							</div>
+							<!-- Якщо потрібна пагінація -->
+							<div class="popular__pagination swiper-pagination">
+							</div>
+							<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
+							<button type="button" class="popular__arrow popular__arrow--prev _icon-arrow-left"></button>
+							<button type="button" class="popular__arrow popular__arrow--next _icon-arrow-right"></button>
+
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -206,7 +274,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240402174030"></script>
+	<script src="js/app.min.js?_v=20240403151429"></script>
 </body>
 
 </html>
