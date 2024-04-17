@@ -229,7 +229,7 @@ textarea.input {
   bottom: 0;
   left: 50%;
   background-color: #52ffe0;
-  transition: all .4s
+  transition: all .3s
 }
 .icon-menu {
   display: none
@@ -332,11 +332,19 @@ textarea.input {
 }
 .header {
   background-color: #101010;
-  position: fixed;
-  top: 0;
+  position: absolute;
   left: 0;
   width: 100%;
   z-index: 50
+}
+.header._header-scroll {
+  position: fixed;
+  top: -200%;
+  transition: top 1s ease 0s
+}
+.header._header-show {
+  transition: top 1.6s ease 0s;
+  top: 0
 }
 .header__container {
   padding-top: .625rem;
@@ -355,7 +363,16 @@ textarea.input {
   flex-shrink: 0
 }
 .footer {
-  background-color: #1d1e22
+  background-color: #1d1e22;
+  opacity: 0;
+  -webkit-transform: translateY(30%);
+  transform: translateY(30%);
+  transition: all .5s
+}
+.footer._watcher-view {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0)
 }
 .footer__container {
   padding-bottom: 1.875rem
@@ -661,6 +678,17 @@ textarea.input {
     transform: translate(-50%,-50%) rotate(360deg)
   }
 }
+.popular__container {
+  opacity: 0;
+  -webkit-transform: translateX(-5%);
+  transform: translateX(-5%);
+  transition: all .5s
+}
+.popular__container._watcher-view {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0)
+}
 .popular__body {
   position: relative
 }
@@ -724,6 +752,17 @@ textarea.input {
 }
 .collections {
   background-color: #1d1e22
+}
+.collections__container {
+  -webkit-transform: translateX(5%);
+  transform: translateX(5%);
+  opacity: 0;
+  transition: all .5s
+}
+.collections__container._watcher-view {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0)
 }
 .tabs-collections__header {
   display: flex;
@@ -885,6 +924,17 @@ textarea.input {
 .insights {
   background: #1d1e22
 }
+.insights__container {
+  opacity: 0;
+  -webkit-transform: translateX(5%);
+  transform: translateX(5%);
+  transition: all .5s
+}
+.insights__container._watcher-view {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0)
+}
 .insights__items {
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(18.125rem,1fr));
@@ -963,7 +1013,16 @@ textarea.input {
   -webkit-column-gap: 1.25rem;
   -moz-column-gap: 1.25rem;
   column-gap: 1.25rem;
-  row-gap: 3.125rem
+  row-gap: 3.125rem;
+  opacity: 0;
+  -webkit-transform: translateX(-5%);
+  transform: translateX(-5%);
+  transition: all .5s
+}
+.download__container._watcher-view {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0)
 }
 .download__info {
   font-family: "Monument Extended";
@@ -1064,6 +1123,10 @@ textarea.input {
     flex-direction: row;
     flex-wrap: wrap;
     row-gap: .625rem
+  }
+  .menu__link._navigator-active::after {
+    width: 100%;
+    left: 0
   }
   .header .header__button {
     flex-shrink: 0

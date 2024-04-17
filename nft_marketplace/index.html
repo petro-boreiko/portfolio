@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240409125436">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240417201435">
 	<link rel="shortcut icon" href="./favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,17 +14,17 @@
 
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<header data-scroll-show="300" data-scroll="200" class="header">
 			<div class="header__container">
 				<a href="#" class="header__logo logo"><img src="img/logo.svg" alt="Logo"></a>
 
 				<div class="header__menu menu">
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="" class="menu__link">Explore</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Collections</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Creators</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Blog</a></li>
+							<li class="menu__item"><a data-goto-header data-goto=".page__insights" href="#" class="menu__link">Explore</a></li>
+							<li class="menu__item"><a data-goto-header data-goto=".page__collections" href="#" class="menu__link">Collections</a></li>
+							<li class="menu__item"><a data-goto-header data-goto=".page__download" href="#" class="menu__link">Creators</a></li>
+							<li class="menu__item"><a data-goto-header data-goto=".page__trading" href="#" class="menu__link">Blog</a></li>
 						</ul>
 					</nav>
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
@@ -99,8 +99,8 @@
 				</div>
 			</section>
 
-			<section class="page__popular popular">
-				<div class="popular__container">
+			<section data-watch-threshold="0.5" data-watch class="page__popular popular">
+				<div data-watch-once data-watch-threshold="0.5" data-watch class="popular__container">
 					<h2 class="popular__title title title--margin">popular categories</h2>
 
 					<div class="popular__body">
@@ -167,8 +167,8 @@
 				</div>
 			</section>
 
-			<section class="page__collections collections">
-				<div class="collections__container">
+			<section data-watch-threshold="0.7" data-watch="navigator" class="page__collections collections">
+				<div data-watch-once data-watch-threshold="0.3" data-watch class="collections__container">
 
 					<div data-tabs class="tabs-collections">
 						<div class="tabs-collections__header">
@@ -829,8 +829,8 @@
 					</div>
 			</section>
 
-			<section class="page__trading popular">
-				<div class="popular__container">
+			<section data-watch-threshold="0.7" data-watch="navigator" class="page__trading popular">
+				<div data-watch-once data-watch-threshold="0.5" data-watch class="popular__container">
 					<h2 class="popular__title title title--margin">Tranding nfts</h2>
 
 					<div class="popular__body">
@@ -1051,8 +1051,8 @@
 				</div>
 			</section>
 
-			<section class="page__insights insights">
-				<div class="insights__container">
+			<section data-watch-threshold="0.7" data-watch="navigator" class="page__insights insights">
+				<div data-watch-once data-watch-threshold="0.5" data-watch class="insights__container">
 					<h2 class="insights__title title title--margin">insights</h2>
 
 					<div class="insights__items">
@@ -1118,20 +1118,21 @@
 				</div>
 			</section>
 
-			<div class="page__download download">
-				<div class="download__container">
+			<div data-watch-threshold="0.7" data-watch="navigator" class="page__download download">
+				<div data-watch-once data-watch-threshold="0.7" data-watch class="download__container">
 					<div class="download__info">
 						Download Qeeb app to track your NFT portfolio and discover more
 					</div>
 
 					<div class="download__actions">
 						<a href="#" class="download__button button button--big _icon-apple">App Store</a>
-						<a href="#" class="download__button button button--big button--bg-dark _icon-android">Google Play</a>
+						<a href="#" class="download__button button button--big button--bg-dark _icon-android">Google
+							Play</a>
 					</div>
 				</div>
 			</div>
 		</main>
-		<footer class="footer">
+		<footer data-watch-once data-watch-threshold="0.5" data-watch class="footer">
 			<div class="footer__container">
 				<div class="footer__main main-footer">
 					<a href="#" class="main-footer__logo logo"><img src="img/logo.svg" alt=""></a>
@@ -1238,7 +1239,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240409125436"></script>
+	<script src="js/app.min.js?_v=20240417201435"></script>
 </body>
 
 </html>
