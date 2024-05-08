@@ -152,12 +152,38 @@ h6 {
   -moz-column-gap: 2rem;
   column-gap: 2rem
 }
+.menu__item {
+  transition: color .3s
+}
+.menu__item--properties {
+  position: relative
+}
+.menu__item--properties::before {
+  display: none
+}
+.menu__item--properties:hover::before {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg)
+}
 .menu__link {
   font-size: 1rem;
   line-height: 1.5
 }
+.menu__menu-sub {
+  padding-top: .625rem
+}
 .icon-menu {
   display: none
+}
+.sub-menu {
+  text-align: right
+}
+.sub-menu__item:not(:last-child) {
+  margin-bottom: .9375rem
+}
+.sub-menu__link {
+  color: #cf6f49;
+  font-size: 1.25rem
 }
 .ibg {
   width: 100%;
@@ -364,6 +390,59 @@ h6 {
   transform: translateY(.125rem);
   font-size: .9375rem
 }
+@media (min-width:61.99875em) {
+  .menu__item--properties {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: .5rem;
+    transition: all .3s
+  }
+  .menu__item--properties:hover .sub-menu {
+    visibility: visible;
+    opacity: 1
+  }
+  .menu__item--properties::before {
+    display: inline-block;
+    font-size: .625rem;
+    transition: all .3s
+  }
+  .menu__menu-sub {
+    padding-top: 0;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    transition: all .3s
+  }
+  .sub-menu {
+    min-width: 9.375rem;
+    text-align: left;
+    padding: .625rem 1.25rem .9375rem;
+    border-radius: .625rem;
+    visibility: hidden;
+    opacity: 0;
+    border-color: #e7e8e3;
+    box-shadow: .0625rem .125rem .25rem .125rem rgba(0,0,0,.1);
+    color: #2a2c1f
+  }
+  .sub-menu::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: .625rem
+  }
+  .sub-menu__link {
+    color: #2a2c1f;
+    font-size: 1rem;
+    transition: all .3s
+  }
+  .sub-menu__link:hover {
+    margin-left: .3125rem;
+    color: #cf6f49
+  }
+}
 @media (min-width:81.875em) {
   .block-header__lable:not(:last-child) {
     margin-bottom: 1.25rem
@@ -428,10 +507,10 @@ h6 {
     padding-top: .625rem;
     flex-direction: column;
     align-items: flex-end;
-    row-gap: 1.5625rem
+    row-gap: .625rem
   }
   .menu__list:not(:last-child) {
-    margin-bottom: 1.875rem
+    margin-bottom: 1.25rem
   }
   .menu__link {
     font-size: 1.5rem;
@@ -484,6 +563,9 @@ h6 {
   .header__container {
     border-bottom: .0625rem solid #939878;
     box-shadow: 0 .125rem .25rem 0 rgba(147,152,120,.805)
+  }
+  .action-header__top {
+    align-self: end
   }
 }
 @media (max-width:61.99875em) and (max-width:37.5em) {
@@ -560,8 +642,8 @@ h6 {
   }
 }
 @media (any-hover:hover) {
-  .menu__link:hover {
-    text-decoration: underline
+  .menu__item:hover {
+    color: #cf6f49
   }
   .button:hover {
     background-color: #abad9b;
