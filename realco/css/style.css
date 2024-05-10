@@ -599,7 +599,6 @@ textarea.input {
   background-color: #f5f5f2
 }
 .hero__container {
-  min-height: 100svh;
   padding-top: calc(var(--height1) + var(--height2));
   display: flex
 }
@@ -808,9 +807,7 @@ textarea.input {
 }
 @media (max-width:75em) {
   .hero__container {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center
+    justify-content: center
   }
   .hero__container::before {
     content: "";
@@ -843,8 +840,7 @@ textarea.input {
   }
   .content-hero {
     z-index: 5;
-    align-items: center;
-    padding: 2.5rem 0
+    padding: 2.8125rem 0
   }
   .content-hero .block-header__text {
     color: #2a2c1f;
