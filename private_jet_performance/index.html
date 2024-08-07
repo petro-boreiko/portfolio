@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240728110535">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240807113704">
 	<link rel="shortcut icon" href="./favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
 
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<header data-scroll-show="1000" class="header">
 			<div class="header__container">
 				<div class="header__logo">
 					<img src="img/logo.svg" alt="Image">
@@ -76,6 +76,118 @@
 
 				</div>
 			</section>
+
+			<section class="page__choose choose">
+				<div class="choose__container">
+					<form action="#" class="choose__form form-choose">
+						<div class="form-choose__top top-select">
+							<div class="top-select__item">
+								<select name="round" data-class-modif="form">
+									<option selected value="1">Round Trip</option>
+									<option value="2">One way</option>
+									<option value="3">Return</option>
+								</select>
+							</div>
+
+							<div class="top-select__item">
+								<select name="round" data-class-modif="form">
+									<option selected value="1">Flight Type</option>
+									<option value="2">Direct</option>
+									<option value="3">Connecting</option>
+									<option value="4">Multi-stop</option>
+								</select>
+							</div>
+
+							<div class="top-select__item">
+								<select name="round" data-class-modif="form">
+									<option selected value="1">Person</option>
+									<option value="2">1</option>
+									<option value="3">2</option>
+									<option value="4">3</option>
+									<option value="5">4</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-choose__main main-choose">
+							<div class="main-choose__content">
+								<div class="main-choose__item">
+									<div class="main-choose__text">
+										From
+									</div>
+
+
+									<input autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="LAX" class="input">
+
+									<div class="main-choose__text">
+										Los Angeles Intl Arpt,Los Angeles
+									</div>
+								</div>
+
+								<button type="button" class="main-choose__change">
+									<img src="img/icons/change.svg" alt="Image">
+								</button>
+
+								<div class="main-choose__item">
+									<div class="main-choose__text">
+										To
+									</div>
+
+
+									<input autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="MIA" class="input">
+
+									<div class="main-choose__text">
+										Miami Intl,Miami
+									</div>
+								</div>
+							</div>
+
+							<div class="main-choose__calendars  items-calendar">
+								<div class="items-calendar__item">
+									<div class="items-calendar__top">
+										Departure
+									</div>
+
+									<div class="items-calendar__content">
+										<lable for="calendar" class="items-calendar__lable _icon-calendar"></lable>
+										<input data-datepicker-min autocomplete="off" type="text" placeholder="Fri 15 Oct" class="input">
+									</div>
+
+									<div class="items-calendar__buttons">
+										<button type="button" class="items-calendar__button">Prev</button>
+										<button type="button" class="items-calendar__button">Next</button>
+									</div>
+								</div>
+
+								<div class="items-calendar__item">
+									<div class="items-calendar__top">
+										Return
+									</div>
+
+									<div class="items-calendar__content">
+										<lable for="calendar" class="items-calendar__lable _icon-calendar"></lable>
+										<input data-datepicker-max data-datepicker type="text" placeholder="Tue 19 Oct" class="input">
+									</div>
+
+									<div class="items-calendar__buttons">
+										<button type="button" class="items-calendar__button">Prev</button>
+										<button type="button" class="items-calendar__button">Next</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-choose__actions">
+
+							<button type="button" class="form-choose__bottom">
+								Add Requirements
+							</button>
+
+							<button class="form-choose__button button button--arrow button--big _icon-arrow-right">Book
+								Flights</button>
+						</div>
+					</form>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -100,7 +212,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240728110535"></script>
+	<script src="js/app.min.js?_v=20240807113704"></script>
 </body>
 
 </html>
