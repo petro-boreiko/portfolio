@@ -721,7 +721,18 @@ body {
   opacity: 1;
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
-  transition: all .6s .2s
+  transition: all .6s .3s
+}
+.hero__button-link {
+  opacity: 0;
+  -webkit-transform: translate(-20%,0);
+  transform: translate(-20%,0)
+}
+._watcher-view .hero__button-link {
+  opacity: 1;
+  -webkit-transform: translate(0,0);
+  transform: translate(0,0);
+  transition: all .6s .5s
 }
 .hero__link {
   color: #151515;
@@ -732,9 +743,7 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   font-weight: 500;
-  opacity: 0;
-  -webkit-transform: translate(-20%,0);
-  transform: translate(-20%,0)
+  transition: all .3s
 }
 .hero__link::before {
   font-weight: 600;
@@ -754,12 +763,6 @@ body {
     -webkit-transform: translateX(0);
     transform: translateX(0)
   }
-}
-._watcher-view .hero__link {
-  opacity: 1;
-  -webkit-transform: translate(0,0);
-  transform: translate(0,0);
-  transition: all .6s .3s
 }
 .window-hero {
   position: relative;
@@ -801,7 +804,7 @@ body {
   z-index: 7
 }
 .choose__container {
-  padding-bottom: 3.125rem;
+  padding-bottom: .625rem;
   -webkit-transform: translateY(-3.75rem);
   transform: translateY(-3.75rem);
   opacity: 0;
@@ -812,7 +815,7 @@ body {
   opacity: 1;
   -webkit-transform: translateY(-3.75rem);
   transform: translateY(-3.75rem);
-  transition: all .6s .2s
+  transition: all .6s .4s
 }
 .choose__form {
   padding: 2.125rem 1.5625rem;
@@ -1150,7 +1153,7 @@ body {
   opacity: 1;
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
-  transition: all .6s .4s
+  transition: all .6s .2s
 }
 .item-private__img img {
   width: 100%;
@@ -1239,7 +1242,7 @@ body {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
-  transition: all .8s .2s
+  transition: all .6s .2s
 }
 .specifications__item--left-top {
   -webkit-transform-origin: top left;
@@ -1361,6 +1364,10 @@ body {
 .luxury__decore {
   display: none
 }
+.products {
+  position: relative;
+  z-index: 5
+}
 .products__container {
   padding-top: 2.0625rem;
   padding-bottom: 2.0625rem
@@ -1444,36 +1451,19 @@ body {
   max-width: 47.5rem;
   margin: 0 auto;
   aspect-ratio: 758/200;
-  -webkit-animation: planeAnim 2s linear;
-  animation: planeAnim 2s linear
+  opacity: 0;
+  -webkit-transform: translate(80%,-70%) scale(.8);
+  transform: translate(80%,-70%) scale(.8)
 }
 .plane__item img {
   width: 100%;
   height: 100%
 }
-@-webkit-keyframes planeAnim {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate(100%,-10%) scale(.8);
-    transform: translate(100%,-10%) scale(.8)
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(0,0) scale(1);
-    transform: translate(0,0) scale(1)
-  }
-}
-@keyframes planeAnim {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate(100%,-10%) scale(.8);
-    transform: translate(100%,-10%) scale(.8)
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(0,0) scale(1);
-    transform: translate(0,0) scale(1)
-  }
+.plane__item._watcher-view {
+  opacity: 1;
+  -webkit-transform: translate(0,0) scale(1);
+  transform: translate(0,0) scale(1);
+  transition: all 1.2s
 }
 @media (min-width:61.99875em) {
   .header._header-scroll .header__container {
@@ -1490,7 +1480,7 @@ body {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
-    transition: all .6s .6s
+    transition: all .7s .6s
   }
   .window-hero__border {
     opacity: 0;
@@ -1503,7 +1493,7 @@ body {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
-    transition: all .6s .6s
+    transition: all .7s .6s
   }
   .choose__container {
     padding-bottom: 4.6875rem
@@ -1719,7 +1709,7 @@ body {
     font-size: 1.125rem
   }
   .private__container {
-    padding-top: 1.5625rem
+    padding-top: 1.25rem
   }
   .private__container {
     padding-bottom: 2.5rem
@@ -1921,7 +1911,7 @@ body {
     transform: translate(0,10%)
   }
   .item-private__img._watcher-view {
-    transition: all .6s .4s;
+    transition: all .6s .2s;
     -webkit-transform: translateY(0);
     transform: translateY(0)
   }
@@ -2086,14 +2076,14 @@ body {
       font-size: calc(1.125rem + .375 * (100vw - 62rem)/ 9.25)
     }
   }
-  @supports (padding-top:clamp(1.5625rem ,-8.910472973rem + 16.8918918919vw ,3.125rem)) {
+  @supports (padding-top:clamp(1.25rem ,-11.3175675676rem + 20.2702702703vw ,3.125rem)) {
     .private__container {
-      padding-top: clamp(1.5625rem ,-8.910472973rem + 16.8918918919vw ,3.125rem)
+      padding-top: clamp(1.25rem ,-11.3175675676rem + 20.2702702703vw ,3.125rem)
     }
   }
-  @supports not (padding-top:clamp(1.5625rem ,-8.910472973rem + 16.8918918919vw ,3.125rem)) {
+  @supports not (padding-top:clamp(1.25rem ,-11.3175675676rem + 20.2702702703vw ,3.125rem)) {
     .private__container {
-      padding-top: calc(1.5625rem + 1.5625 * (100vw - 62rem)/ 9.25)
+      padding-top: calc(1.25rem + 1.875 * (100vw - 62rem)/ 9.25)
     }
   }
   @supports (padding-bottom:clamp(2.5rem ,-14.2567567568rem + 27.027027027vw ,5rem)) {
@@ -2327,6 +2317,9 @@ body {
   }
   .hero__title a:hover {
     text-decoration: underline
+  }
+  .hero__link:hover {
+    color: #656293
   }
   .top-select__item .select__option:hover {
     background: #d9d9d9
