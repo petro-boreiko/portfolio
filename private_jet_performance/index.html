@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20240818132813">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240818151803">
 	<link rel="shortcut icon" href="./favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,12 +27,15 @@
 				<div class="header__menu menu">
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="#" class="menu__link">Home</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Booking</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Private Jet</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Specification</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Luxury Charters</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Membership</a></li>
+							<li data-goto=".hero" class="menu__item"><a href="#" class="menu__link">Home</a></li>
+							<li data-goto=".choose" data-goto-header data-goto-top="100" class="menu__item"><a href="#" class="menu__link">Booking</a></li>
+							<li data-goto=".private" data-goto-header class="menu__item"><a href="#" class="menu__link">Private
+									Jet</a></li>
+							<li data-goto=".specifications" data-goto-header class="menu__item"><a href="#" class="menu__link">Specification</a></li>
+							<li data-goto=".luxury" data-goto-header class="menu__item"><a href="#" class="menu__link">Luxury
+									Charters</a></li>
+							<li data-goto=".products" data-goto-header class="menu__item"><a href="#" class="menu__link">Membership</a>
+							</li>
 						</ul>
 					</nav>
 				</div>
@@ -466,7 +469,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240818132813"></script>
+	<script src="js/app.min.js?_v=20240818151803"></script>
 </body>
 
 </html>

@@ -545,19 +545,12 @@ body {
   transform: translate(-1.25rem,.4375rem)
 }
 .header {
-  position: absolute;
+  position: fixed;
   z-index: 50;
   width: 100%
 }
 .header._header-scroll {
-  position: fixed;
-  top: -200%;
-  background-color: rgba(228,244,246,.9);
-  transition: top .5s
-}
-.header._header-show {
-  transition: top .5s;
-  top: 0
+  background-color: rgba(228,244,246,.9)
 }
 .header__container {
   min-height: 7rem;
@@ -1139,6 +1132,8 @@ body {
   border-radius: 3.125rem 0 0 3.125rem
 }
 .item-private__img {
+  position: relative;
+  z-index: 2;
   border-radius: 1.25rem;
   overflow: hidden;
   opacity: 0;
@@ -1160,6 +1155,8 @@ body {
   height: 100%
 }
 .item-private__content {
+  position: relative;
+  z-index: 2;
   opacity: 0;
   -webkit-transform: translate(10%,0);
   transform: translate(10%,0)
@@ -1178,7 +1175,6 @@ body {
   border-radius: 0 3.125rem 3.125rem 0;
   background-color: #e5f4f6;
   position: absolute;
-  z-index: -1;
   top: 0;
   left: -282.45614%;
   width: 300%;
@@ -1195,7 +1191,7 @@ body {
   opacity: 1;
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
-  transition: all .7s .6s
+  transition: all .6s .2s
 }
 .specifications__container {
   padding-top: 2.0625rem;
@@ -1389,10 +1385,10 @@ body {
   grid-template-columns: repeat(auto-fill,minmax(22.125rem,1fr))
 }
 .item-products {
-  width: 100%;
+  display: block;
   border-radius: 1.25rem;
   padding: 1.5rem;
-  background: #f5f5f5;
+  background-color: #f5f5f5;
   transition: all .3s
 }
 .item-products__title {
@@ -1466,8 +1462,16 @@ body {
   transition: all 1.2s
 }
 @media (min-width:61.99875em) {
-  .header._header-scroll .header__container {
-    min-height: 5rem
+  ._navigator-active .menu__link {
+    text-decoration: underline
+  }
+  .header._header-scroll {
+    top: -200%;
+    transition: top .5s
+  }
+  .header._header-show {
+    transition: top .5s;
+    top: 0
   }
   .window-hero__bg {
     opacity: 0;
@@ -1512,6 +1516,10 @@ body {
   .item-private__img {
     flex: 0 1 36.8125rem;
     align-self: flex-start
+  }
+  .item-private__content {
+    padding-top: 1.5625rem;
+    padding-bottom: 1.5625rem
   }
   .item-private__content {
     flex: 0 1 28.9375rem
@@ -1566,6 +1574,11 @@ body {
     -webkit-transform: translate(0,0);
     transform: translate(0,0);
     transition: all .6s .2s
+  }
+}
+@media (min-width:61.99875em) and (min-width:61.99875em) {
+  .header._header-scroll .header__container {
+    min-height: 5rem
   }
 }
 @media (min-width:71.25em) {
@@ -1643,6 +1656,9 @@ body {
   }
   .luxury__cards {
     gap: 1.875rem
+  }
+  .item-products {
+    padding: 1.5rem
   }
   .item-products__title {
     font-size: 2rem
@@ -1848,6 +1864,18 @@ body {
   .title--margin:not(:last-child) {
     margin-bottom: 1.5625rem
   }
+  .title::before {
+    width: 1.875rem;
+    height: 1.875rem;
+    -webkit-transform: translate(-.9375rem,.3125rem);
+    transform: translate(-.9375rem,.3125rem)
+  }
+  .header {
+    top: 0
+  }
+  .header._header-scroll .header__container {
+    min-height: 3.75rem
+  }
   .header__container {
     min-height: 3.75rem
   }
@@ -1967,6 +1995,9 @@ body {
     -webkit-transform: translate(0,0);
     transform: translate(0,0);
     transition: all .4s
+  }
+  .item-products {
+    padding: 1rem
   }
 }
 @media (max-width:61.99875em) and (any-hover:none) {
@@ -2278,6 +2309,16 @@ body {
       font-size: calc(1.875rem + 1.5625 * (100vw - 61.99875rem)/ 9.25125)
     }
   }
+  @supports (padding:clamp(1rem ,-2.3508309688rem + 5.4046750439vw ,1.5rem)) {
+    .item-products {
+      padding: clamp(1rem ,-2.3508309688rem + 5.4046750439vw ,1.5rem)
+    }
+  }
+  @supports not (padding:clamp(1rem ,-2.3508309688rem + 5.4046750439vw ,1.5rem)) {
+    .item-products {
+      padding: calc(1rem + .5 * (100vw - 61.99875rem)/ 9.25125)
+    }
+  }
 }
 @media (min-width:20em) and (max-width:71.25em) {
   @supports (gap:clamp(0.625rem ,0.381097561rem + 1.2195121951vw ,1.25rem)) {
@@ -2341,9 +2382,9 @@ body {
     transition: all .3s
   }
   .item-products:hover {
-    -webkit-transform: translateY(-1.5625rem);
-    transform: translateY(-1.5625rem);
-    background: #656293
+    -webkit-transform: translateY(-.625rem);
+    transform: translateY(-.625rem);
+    background-color: #656293
   }
   .item-products:hover .item-products__price,
   .item-products:hover .item-products__title {
