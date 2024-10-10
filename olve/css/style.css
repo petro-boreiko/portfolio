@@ -233,7 +233,7 @@ body {
 .header._header-scroll {
   position: fixed;
   top: -200%;
-  background-color: #d4f1f4
+  background-color: rgba(255,255,255,.903)
 }
 .header._header-show {
   transition: all .4s .1s;
@@ -392,6 +392,74 @@ body {
 .hero__img {
   display: none
 }
+.about-us__slider {
+  width: 124.6875rem;
+  margin-left: -21.875rem
+}
+.about-us__text {
+  max-width: 40rem;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  line-height: 1.5
+}
+.slide-about-us__content--bg {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  row-gap: 1.25rem
+}
+.slide-about-us__content--bg .slide-about-us__img {
+  aspect-ratio: 1/.9;
+  background-color: #e8f1ff
+}
+.slide-about-us__img {
+  border-radius: 3.125rem;
+  overflow: hidden;
+  aspect-ratio: 1/1.4
+}
+.slide-about-us__img img {
+  width: 100%;
+  height: 100%
+}
+.slide-about-us__title {
+  background: linear-gradient(24.47deg,#0103ff,#01e4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 500;
+  line-height: 1.2
+}
+.swiper {
+  overflow: hidden
+}
+.swiper-initialized {
+  touch-action: pan-y
+}
+.swiper-wrapper {
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+  display: flex;
+  position: relative
+}
+.swiper-vertical .swiper-wrapper {
+  flex-direction: column
+}
+.swiper-autoheight .swiper-wrapper {
+  align-items: flex-start
+}
+.swiper-initialized .swiper-slide {
+  flex-shrink: 0
+}
+.swiper-android .swiper-slide,
+.swiper-android .swiper-wrapper {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0)
+}
+.swiper-button-lock {
+  display: none!important
+}
 @media (min-width:47.99875em) {
   .hero__content {
     flex: 0 1 55%
@@ -465,10 +533,38 @@ body {
     column-gap: 2.5rem
   }
   .hero__container {
+    padding-bottom: 4.375rem
+  }
+  .hero__container {
     padding-top: 6.875rem
   }
   .hero__title {
     font-size: 4.375rem
+  }
+  .about-us {
+    padding-top: 6.25rem
+  }
+  .about-us {
+    padding-bottom: 6.25rem
+  }
+  .about-us__slider {
+    padding-bottom: 3.125rem
+  }
+  .slide-about-us__title {
+    font-size: 2.875rem
+  }
+}
+@media (max-width:20em) {
+  .slide-about-us__title {
+    font-size: 1.5rem
+  }
+}
+@media (max-width:62.435625em) {
+  .about-us {
+    padding-top: 1.875rem
+  }
+  .about-us {
+    padding-bottom: 3.125rem
   }
 }
 @media (max-width:61.99875em) {
@@ -482,6 +578,20 @@ body {
   }
   .header__menu {
     justify-self: center
+  }
+  .about-us {
+    margin-left: 0
+  }
+  .about-us__slider {
+    width: 100%;
+    margin-left: 0;
+    margin-right: -.9375rem
+  }
+  .slide-about-us__content--bg .slide-about-us__img {
+    aspect-ratio: 1/.8
+  }
+  .slide-about-us__img {
+    aspect-ratio: 1/1.2
   }
 }
 @media (max-width:47.99875em) {
@@ -575,6 +685,9 @@ body {
     background-color: #0a0b5c
   }
   .hero__container {
+    padding-bottom: 1.875rem
+  }
+  .hero__container {
     padding-top: 4.375rem;
     justify-content: center;
     text-align: center
@@ -587,6 +700,9 @@ body {
   }
   .hero__button {
     width: 100%
+  }
+  .about-us__slider {
+    padding-bottom: 1.875rem
   }
 }
 @media (max-width:47.99875em)and (any-hover:none) {
@@ -639,10 +755,16 @@ body {
 }
 @media (min-width:47.99875em)and (max-width:80.9375em) {
   .hero__container {
+    padding-bottom: clamp(1.875rem ,-1.768030625rem + 7.5898447877vw ,4.375rem)
+  }
+  .hero__container {
     padding-top: clamp(4.375rem ,.731969375rem + 7.5898447877vw ,6.875rem)
   }
   .hero__title {
     font-size: clamp(2.25rem ,-.8465760313rem + 6.4513680695vw ,4.375rem)
+  }
+  .about-us__slider {
+    padding-bottom: clamp(1.875rem ,.0534846875rem + 3.7949223938vw ,3.125rem)
   }
 }
 @media (min-width:47.99875em)and (min-width:62.43625em)and (max-width:80.9375em) {
@@ -653,6 +775,19 @@ body {
 @media (min-width:47.99875em)and (max-width:62.43625em) {
   .hero__img {
     padding-right: .0000000625rem
+  }
+}
+@media (min-width:62.435625em)and (max-width:80.9375em) {
+  .about-us {
+    padding-top: clamp(1.875rem ,-12.8886852684rem + 23.646252069vw ,6.25rem)
+  }
+  .about-us {
+    padding-bottom: clamp(3.125rem ,-7.4204894774rem + 16.8901800493vw ,6.25rem)
+  }
+}
+@media (min-width:20em)and (max-width:80.9375em) {
+  .slide-about-us__title {
+    font-size: clamp(1.5rem ,1.0487179487rem + 2.2564102564vw ,2.875rem)
   }
 }
 @media (any-hover:hover) {
