@@ -3293,7 +3293,7 @@
                     spaceBetween: 15
                 },
                 450: {
-                    slidesPerView: 1.3
+                    slidesPerView: 1.4
                 },
                 768: {
                     slidesPerView: 1.9,
