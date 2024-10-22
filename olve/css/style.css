@@ -637,7 +637,7 @@ textarea.input {
   opacity: 1;
   -webkit-transform: translateY(0);
   transform: translateY(0);
-  transition: all .4s .1s
+  transition: all .4s .2s
 }
 .hero__title:not(:last-child) {
   margin-bottom: .75rem
@@ -659,7 +659,7 @@ textarea.input {
   opacity: 1;
   -webkit-transform: translateY(0);
   transform: translateY(0);
-  transition: all .4s .2s
+  transition: all .4s .3s
 }
 .hero__text:not(:last-child) {
   margin-bottom: 1.5rem
@@ -678,7 +678,7 @@ textarea.input {
   opacity: 1;
   -webkit-transform: translateY(0);
   transform: translateY(0);
-  transition: all .4s .2s
+  transition: all .4s .4s
 }
 .hero__img {
   display: none
@@ -1404,7 +1404,7 @@ textarea.input {
     opacity: 1;
     -webkit-transform: translateX(0);
     transform: translateX(0);
-    transition: all .4s .1s
+    transition: all .4s .4s
   }
   .hero__img img {
     width: 100%;

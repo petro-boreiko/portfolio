@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20241018121135">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241022080817">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@
 	<div class="wrapper">
 		<header data-scroll="120" data-scroll-show="1000" class="header">
 			<div class="header__container">
-				<a href="#" class="header__logo logo">
+				<a data-goto-header data-goto=".hero" href="#" class="header__logo logo">
 					<svg width="114" height="44" viewBox="0 0 114 44" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M22.0027 36.9206C13.76 36.9209 7.07997 30.2409 7.08027 21.9981C7.08058 13.7554 13.7611 7.07488 22.0038 7.07457C30.2466 7.07426 36.9266 13.7543 36.9263 21.997C36.9261 26.1161 35.2553 29.8486 32.556 32.548C29.8566 35.2473 26.1241 36.9181 22.005 36.9183M16.0946 2.66117L13.8393 6.9276C12.2836 9.87314 9.87424 12.2825 6.9287 13.8382L2.66227 16.0935C1.5761 16.6688 0.89492 17.7964 0.894875 19.0253L0.894653 24.976C0.894608 26.2049 1.57341 27.3347 2.66183 27.9077L6.92809 30.1626C9.87351 31.7181 12.2827 34.1273 13.8382 37.0727L16.0932 41.339C16.6684 42.4251 17.796 43.1062 19.0248 43.1062L24.9756 43.106C26.2044 43.1059 27.3343 42.427 27.9073 41.3386L30.1626 37.0721C31.7183 34.1266 34.1277 31.7172 37.0732 30.1615L41.3397 27.9062C42.4258 27.3309 43.107 26.2033 43.1071 24.9745L43.1073 19.0237C43.1073 17.7949 42.4262 16.6673 41.3401 16.0921L37.0738 13.8371C34.1284 12.2816 31.7192 9.87241 30.1637 6.92699L27.9088 2.66073C27.3335 1.57461 26.206 0.893508 24.9771 0.893555L19.0264 0.893773C18.1335 0.893806 17.2936 1.25052 16.6791 1.86495C16.449 2.09507 16.2511 2.36202 16.0923 2.65887" fill="#0A0B5C" />
 						<path d="M104.707 32.4198C102.817 32.4198 101.137 31.9881 99.6667 31.1248C98.22 30.2381 97.0884 29.0481 96.2717 27.5548C95.455 26.0381 95.0467 24.3464 95.0467 22.4798C95.0467 20.5664 95.455 18.8748 96.2717 17.4048C97.1117 15.9348 98.2317 14.7798 99.6317 13.9398C101.032 13.0764 102.618 12.6448 104.392 12.6448C105.815 12.6448 107.087 12.8898 108.207 13.3798C109.327 13.8698 110.272 14.5464 111.042 15.4098C111.812 16.2498 112.395 17.2181 112.792 18.3148C113.212 19.4114 113.422 20.5781 113.422 21.8148C113.422 22.1181 113.41 22.4331 113.387 22.7598C113.363 23.0864 113.317 23.3898 113.247 23.6698H98.1617V20.5198H111.007L109.117 21.9548C109.35 20.8114 109.268 19.7964 108.872 18.9098C108.498 17.9998 107.915 17.2881 107.122 16.7748C106.352 16.2381 105.442 15.9698 104.392 15.9698C103.342 15.9698 102.408 16.2381 101.592 16.7748C100.775 17.2881 100.145 18.0348 99.7017 19.0148C99.2584 19.9714 99.0834 21.1381 99.1767 22.5148C99.06 23.7981 99.235 24.9181 99.7017 25.8748C100.192 26.8314 100.868 27.5781 101.732 28.1148C102.618 28.6514 103.622 28.9198 104.742 28.9198C105.885 28.9198 106.853 28.6631 107.647 28.1498C108.463 27.6364 109.105 26.9714 109.572 26.1548L112.792 27.7298C112.418 28.6164 111.835 29.4214 111.042 30.1448C110.272 30.8448 109.338 31.4048 108.242 31.8248C107.168 32.2214 105.99 32.4198 104.707 32.4198Z" fill="#0A0B5C" />
@@ -34,10 +34,18 @@
 
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="#" class="menu__link">Our Services</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">About Us</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Contact Us</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">More</a></li>
+							<li class="menu__item">
+								<a data-goto-header data-goto=".services" href="#" class="menu__link">Our Services</a>
+							</li>
+							<li class="menu__item">
+								<a data-goto-header data-goto=".about-us" href="#" class="menu__link">About Us</a>
+							</li>
+							<li class="menu__item">
+								<a data-goto-header data-goto=".contact-us" href="#" class="menu__link">Contact Us</a>
+							</li>
+							<li class="menu__item">
+								<a data-goto-header data-goto=".footer" href="#" class="menu__link">More</a>
+							</li>
 						</ul>
 					</nav>
 				</div>
@@ -638,7 +646,7 @@
 				</div>
 
 				<div class="footer__logos">
-					<a data-watch href="#" class="footer__logo logo">
+					<a data-watch data-goto-header data-goto=".hero" href="#" class="footer__logo logo">
 						<svg width="114" height="44" viewBox="0 0 114 44" xmlns="http://www.w3.org/2000/svg">
 							<path d="M22.0027 36.9206C13.76 36.9209 7.07997 30.2409 7.08027 21.9981C7.08058 13.7554 13.7611 7.07488 22.0038 7.07457C30.2466 7.07426 36.9266 13.7543 36.9263 21.997C36.9261 26.1161 35.2553 29.8486 32.556 32.548C29.8566 35.2473 26.1241 36.9181 22.005 36.9183M16.0946 2.66117L13.8393 6.9276C12.2836 9.87314 9.87424 12.2825 6.9287 13.8382L2.66227 16.0935C1.5761 16.6688 0.89492 17.7964 0.894875 19.0253L0.894653 24.976C0.894608 26.2049 1.57341 27.3347 2.66183 27.9077L6.92809 30.1626C9.87351 31.7181 12.2827 34.1273 13.8382 37.0727L16.0932 41.339C16.6684 42.4251 17.796 43.1062 19.0248 43.1062L24.9756 43.106C26.2044 43.1059 27.3343 42.427 27.9073 41.3386L30.1626 37.0721C31.7183 34.1266 34.1277 31.7172 37.0732 30.1615L41.3397 27.9062C42.4258 27.3309 43.107 26.2033 43.1071 24.9745L43.1073 19.0237C43.1073 17.7949 42.4262 16.6673 41.3401 16.0921L37.0738 13.8371C34.1284 12.2816 31.7192 9.87241 30.1637 6.92699L27.9088 2.66073C27.3335 1.57461 26.206 0.893508 24.9771 0.893555L19.0264 0.893773C18.1335 0.893806 17.2936 1.25052 16.6791 1.86495C16.449 2.09507 16.2511 2.36202 16.0923 2.65887" fill="#0A0B5C" />
 							<path d="M104.707 32.4198C102.817 32.4198 101.137 31.9881 99.6667 31.1248C98.22 30.2381 97.0884 29.0481 96.2717 27.5548C95.455 26.0381 95.0467 24.3464 95.0467 22.4798C95.0467 20.5664 95.455 18.8748 96.2717 17.4048C97.1117 15.9348 98.2317 14.7798 99.6317 13.9398C101.032 13.0764 102.618 12.6448 104.392 12.6448C105.815 12.6448 107.087 12.8898 108.207 13.3798C109.327 13.8698 110.272 14.5464 111.042 15.4098C111.812 16.2498 112.395 17.2181 112.792 18.3148C113.212 19.4114 113.422 20.5781 113.422 21.8148C113.422 22.1181 113.41 22.4331 113.387 22.7598C113.363 23.0864 113.317 23.3898 113.247 23.6698H98.1617V20.5198H111.007L109.117 21.9548C109.35 20.8114 109.268 19.7964 108.872 18.9098C108.498 17.9998 107.915 17.2881 107.122 16.7748C106.352 16.2381 105.442 15.9698 104.392 15.9698C103.342 15.9698 102.408 16.2381 101.592 16.7748C100.775 17.2881 100.145 18.0348 99.7017 19.0148C99.2584 19.9714 99.0834 21.1381 99.1767 22.5148C99.06 23.7981 99.235 24.9181 99.7017 25.8748C100.192 26.8314 100.868 27.5781 101.732 28.1148C102.618 28.6514 103.622 28.9198 104.742 28.9198C105.885 28.9198 106.853 28.6631 107.647 28.1498C108.463 27.6364 109.105 26.9714 109.572 26.1548L112.792 27.7298C112.418 28.6164 111.835 29.4214 111.042 30.1448C110.272 30.8448 109.338 31.4048 108.242 31.8248C107.168 32.2214 105.99 32.4198 104.707 32.4198Z" fill="#0A0B5C" />
@@ -687,7 +695,151 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20241018121135"></script>
+	<!-- Документація: https://template.fls.guru/template-docs/modul-preloader.html -->
+	<div id="fls-preloader">
+		<!-- Скріпт прелоадера -->
+		<script>
+			function preloader() {
+				const preloaderImages = document.querySelector('[data-preloader]') ? document.querySelectorAll('[data-preloader] img') : document.querySelectorAll('img');
+				const preloaderContainer = document.querySelector('#fls-preloader');
+				if (preloaderImages.length) {
+					const preloaderStyleTemplate = `
+				<style>
+					* {
+						padding: 0px;
+						margin: 0px;
+						border: 0px;
+						box-sizing: border-box;
+					}
+					/* Головний блок */
+					.fls-preloader{
+						pointer-events: none;
+						z-index: -1;
+						position: fixed;
+						width: 100%;
+						height: 100%;
+						top: 0;
+						left: 0;
+						display: flex;
+						justify-content:center;
+						align-items: center;
+					}
+					/* Блок з елементами */
+					.fls-preloader__body{
+						padding: 0.93rem;
+						min-width: 20rem;
+						display: flex;
+						flex-direction: column;
+						gap: 1rem;
+					}
+
+					.fls-preloader__img {
+						align-self: center;
+
+						width: 8rem;
+						height: 8rem;
+
+						animation:rotatePreloaded 0.9s infinite linear;
+					}
+
+					@keyframes rotatePreloaded {
+						0% {
+								ransform: rotate(0deg);
+						}
+						100% {
+							transform: rotate(360deg);
+						}
+					}
+
+					/* Прогресбар */
+					.fls-preloader__line{}
+					/* Лінія прогресбару */
+					.fls-preloader__line span{
+						display: inline-block;
+						transition: width 0.2s ease;
+						height: 0.8rem;
+						background-color: rgb(10, 11, 92);
+					}
+					.lock body{
+						overflow: hidden;
+						touch-action: none;
+						overscroll-behavior: none;
+					}
+					.loading body>*:not(.fls-preloader){
+						opacity: 0;
+						visibility: hidden;
+					}
+					.loaded body>*:not(.fls-preloader){
+						transition: opacity 0.6s ease 0s;
+						opacity: 1;
+						visibility: visible;
+					}
+				</style>`;
+
+					document.head.insertAdjacentHTML("beforeend", preloaderStyleTemplate);
+					// <div class="fls-preloader__counter">0%</div>
+					const preloaderTemplate = `
+					<div class="fls-preloader">
+						<div class="fls-preloader__body">
+ 							<img class="fls-preloader__img" src="img/prealoader-img.svg" alt="Image">
+						
+							<div class="fls-preloader__line"><span></span></div>
+						</div>
+					</div>`;
+					document.body.insertAdjacentHTML("beforeend", preloaderTemplate);
+
+					const
+						preloader = document.querySelector('.fls-preloader'),
+						showPecentLoad = document.querySelector('.fls-preloader__counter'),
+						showLineLoad = document.querySelector('.fls-preloader__line span'),
+						htmlDocument = document.documentElement;
+
+					let imagesLoadedCount = counter = progress = 0;
+
+					htmlDocument.classList.add('loading');
+					htmlDocument.classList.add('lock');
+
+					preloaderImages.forEach(preloaderImage => {
+						const imgClone = document.createElement('img');
+						if (imgClone) {
+							imgClone.onload = imageLoaded;
+							imgClone.onerror = imageLoaded;
+							preloaderImage.dataset.src ? imgClone.src = preloaderImage.dataset.src : imgClone.src = preloaderImage.src;
+						}
+					});
+
+					function setValueProgress(progress) {
+						// showPecentLoad ? showPecentLoad.innerText = `${progress}%` : null;
+						showLineLoad ? showLineLoad.style.width = `${progress}%` : null;
+					}
+					// showPecentLoad ? setValueProgress(progress) : null;
+
+					function imageLoaded() {
+						imagesLoadedCount++;
+						progress = Math.round((100 / preloaderImages.length) * imagesLoadedCount);
+						const intervalId = setInterval(() => {
+							counter >= progress ? clearInterval(intervalId) : setValueProgress(++counter);
+							counter >= 100 ? addLoadedClass() : null;
+						}, 10);
+					}
+
+					function addLoadedClass() {
+						htmlDocument.classList.add('loaded');
+						htmlDocument.classList.remove('lock');
+						htmlDocument.classList.remove('loading');
+						setInterval(() => {
+							preloader.remove();
+							preloaderContainer.remove();
+						}, 500);
+					}
+				} else {
+					preloaderContainer.remove();
+				}
+			}
+			preloader();
+		</script>
+	</div>
+	<script src="js/app.min.js?_v=20241022080817"></script>
 </body>
 
 </html>
