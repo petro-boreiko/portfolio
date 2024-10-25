@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241022121209">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241025120850">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
 
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<header data-scroll="120" class="header">
 			<div class="header__container">
 				<a href="#" class="header__logo logo">
 					<img src="img/logo.svg" alt="Image">
@@ -36,24 +36,84 @@
 				</div>
 			</div>
 		</header>
-		<main class="page">
-			<main class="page" data-fp>
-				<section data-fp-section class="page__hero">
-				</section>
+		<main class="page" data-fp>
+			<section data-fp-section class="page__hero hero">
+				<div class="hero__container">
+					<div class="hero__content content-hero">
+						<h1 class="content-hero__title">MIÓD MALINA</h1>
+						<div class="content-hero__text">OSADA ISTEBNA</div>
+						<a href="#" class="content-hero__button button">ZOBACZ WIĘCEJ</a>
+					</div>
+				</div>
 
-				<section data-fp-section class="page__about-us"></section>
+				<!-- Оболонка слайдера -->
+				<div class="hero__slider swiper">
+					<!-- Частина слайдера, що рухається -->
+					<div class="hero__wrapper swiper-wrapper">
+						<!-- Слайд -->
+						<div class="hero__slide swiper-slide">
+							<img src="img/hero/01.webp" alt="Image">
+						</div>
+						<div class="hero__slide swiper-slide">
+							<img src="img/hero/02.webp" alt="Image">
+						</div>
+						<div class="hero__slide swiper-slide">
+							<img src="img/hero/03.webp" alt="Image">
+						</div>
+						<div class="hero__slide swiper-slide">
+							<img src="img/hero/04.webp" alt="Image">
+						</div>
+						<div class="hero__slide swiper-slide">
+							<img src="img/hero/05.webp" alt="Image">
+						</div>
+					</div>
+				</div>
+			</section>
 
-				<section data-fp-section class="page__event"></section>
+			<section data-fp-section class="page__about-us about-us">
+				<div class="about-us__container">
+					<div class="about-us__wrapper">
+						<div class="about-us__top block-title">
+							<h2 class="block-title__title">O NAS</h2>
+							<div class="block-title__sub-title">TROCHĘ O NAS, DOMKACH I NASZEJ OSADZIE</div>
+							<div class="block-title__line"></div>
+						</div>
 
-				<section data-fp-section class="page__contact-us"></section>
-			</main>
+						<div data-showmore class="showmore-about-us">
+							<div data-showmore-content="120" class="showmore-about-us__content">
+								<div class="showmore-about-us__text">
+									<p>
+										Osada Miód Malina powstała w 2023 roku. Do dyspozycji naszych gości mamy obecnie 4
+										domy,
+										których
+										wynajem uruchomiliśmy
+										na koniec 2023 roku. Osada jest całkowicie nowa i czeka aby ugościć i rozpieścić swoich
+										gości..Pomiędzy Koniakowem a Wisłą, na malowniczych zboczach Małego Beskidu, wyłoniła
+										się Osada, która wzbudza zainteresowanie
+										każdego przechodnia. Nosi nazwę Osada Miód Malina. Stworzono ją by była miejscem
+										spokoju i relaksu dla przyjeżdżających
+										gości z całej Polski. Kameralne, ciche miejsce, stworzone z myślą o doświadczaniu
+										sielskości gór polskich.
+									</p>
+								</div>
+							</div>
+							<button hidden data-showmore-button type="button" class="button showmore-about-us__more"><span>CZYTAJ DALEJ
+								</span><span>Ukrywać</span></button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section data-fp-section class="page__event"></section>
+
+			<section data-fp-section class="page__contact-us"></section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20241022121209"></script>
+	<script src="js/app.min.js?_v=20241025120850"></script>
 </body>
 
 </html>
