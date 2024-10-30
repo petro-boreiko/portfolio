@@ -378,12 +378,14 @@ h6 {
   flex-shrink: 0
 }
 .hero {
-  min-height: 100svh;
   position: relative
 }
 .hero__container {
   min-height: 100svh;
   align-content: center
+}
+.hero__content {
+  padding-block: 6.25rem
 }
 .hero__slider {
   position: absolute;
@@ -411,7 +413,6 @@ h6 {
   object-fit: cover
 }
 .content-hero {
-  padding-block: 5rem;
   position: relative;
   z-index: 3;
   text-align: center;
@@ -434,10 +435,10 @@ h6 {
   align-content: center
 }
 .about-us__wrapper {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
   max-width: 37.5rem;
-  margin: 0 auto;
-  padding-top: 3.125rem;
-  padding-bottom: 3.125rem
+  margin: 0 auto
 }
 .showmore-about-us {
   text-align: center
@@ -455,9 +456,11 @@ h6 {
 .event__container {
   min-height: 100svh;
   align-content: center;
-  padding-top: 5rem;
-  padding-bottom: 2.5rem;
   text-align: center
+}
+.event__body {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem
 }
 .event__header {
   margin-bottom: 1.875rem
@@ -508,8 +511,12 @@ h6 {
 }
 .contact-us__container {
   min-height: 100svh;
-  align-content: center;
-  text-align: center
+  text-align: center;
+  align-content: center
+}
+.contact-us__body {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem
 }
 .contact-us__header:not(:last-child) {
   margin-bottom: 1.875rem
@@ -627,13 +634,6 @@ h6 {
   }
   .header__container {
     min-height: 4.375rem
-  }
-  .about-us__wrapper {
-    padding-top: 4.0625rem;
-    padding-bottom: 2.5rem
-  }
-  .event__container {
-    padding-top: 4.0625rem
   }
 }
 @media (max-width:47.99875em) {
