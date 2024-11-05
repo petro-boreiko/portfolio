@@ -5,8 +5,12 @@
 	<title>Miód Malina</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241104120804">
+	<style>
+		body {
+			opacity: 0;
+		}
+	</style>
+	<link rel="stylesheet" href="css/style.min.css?_v=20241105121805">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,9 +18,9 @@
 
 <body>
 	<div class="wrapper">
-		<header data-scroll="50" class="header">
+		<header class="header">
 			<div class="header__container">
-				<a href="#" class="header__logo logo">
+				<a data-goto=".page__hero" href="#" class="header__logo logo">
 					<img src="img/logo.svg" alt="Image">
 					<span>MIÓD MALINA</span>
 				</a>
@@ -24,11 +28,21 @@
 				<div class="header__menu menu">
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="#" class="menu__link">Strona Główna</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">O nas</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Atrakcje</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Udogodnenia</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Kontakt</a></li>
+							<li class="menu__item">
+								<a data-goto=".hero" href="#" class="menu__link">Strona Główna</a>
+							</li>
+							<li class="menu__item">
+								<a data-goto=".about-us" href="#" class="menu__link">O nas</a>
+							</li>
+							<li class="menu__item">
+								<a data-goto=".event" href="#" class="menu__link">Atrakcje</a>
+							</li>
+							<li class="menu__item">
+								<a data-goto=".amenities" href="#" class="menu__link">Udogodnenia</a>
+							</li>
+							<li class="menu__item">
+								<a data-goto=".contact-us" href="#" class="menu__link">Kontakt</a>
+							</li>
 						</ul>
 					</nav>
 
@@ -37,12 +51,38 @@
 			</div>
 		</header>
 		<main class="page" data-fp>
-			<section data-fp-section class="page__hero hero">
+			<div data-watch="navigator" class="intro">
+				<div class="intro__body">
+					<div class="intro__img">
+						<svg viewBox="0 0 60.7895 60.802" fill="none">
+							<path d="M45.12 54.14L36.46 43.54C36.43 43.49 36.39 43.44 36.35 43.4L31.38 37.31L35.6 32.15L50.22 50.06C48.69 51.61 46.98 52.97 45.12 54.14ZM25.82 57.97L29.85 53.03L33.98 58.1C32.8 58.26 31.6 58.34 30.37 58.34C28.83 58.34 27.31 58.21 25.82 57.97ZM23.16 57.4C21 56.81 18.93 55.98 17.01 54.93L29.83 39.23L33.91 44.23L23.16 57.4ZM42.97 55.34C41.01 56.32 38.92 57.09 36.74 57.6L31.44 51.1L35.48 46.15L42.97 55.34ZM10.53 50.05L30.38 25.74L34.04 30.21L14.91 53.65C13.33 52.6 11.87 51.39 10.53 50.05ZM30.38 2.43C45.4 2.43 57.67 14.31 58.3 29.17L53.56 29.17C52.9 17.16 42.92 7.52 30.78 7.45C30.74 7.45 30.69 7.45 30.65 7.45C24.61 7.45 18.9 9.82 14.55 14.12C10.44 18.19 8.04 23.49 7.73 29.17L2.46 29.17C3.1 14.31 15.37 2.43 30.38 2.43ZM53.45 46.15C52.96 46.87 52.43 47.57 51.87 48.24L50.17 46.15L53.45 46.15ZM56.93 39.15C56.41 40.74 55.75 42.26 54.96 43.72L48.21 43.72L44.47 39.15L56.93 39.15ZM52.38 31.6L58.3 31.6C58.23 33.35 57.99 35.06 57.6 36.72L42.48 36.72L38.31 31.6L52.38 31.6ZM24.45 29.17L17.44 29.17C18.39 22.84 23.8 17.97 30.26 17.88C30.32 17.88 30.4 17.88 30.46 17.88C36.94 17.88 42.53 22.8 43.49 29.17L36.3 29.17L31.31 23.06C30.85 22.48 29.88 22.48 29.42 23.06L24.45 29.17ZM45.94 29.17C44.95 21.39 38.12 15.35 30.23 15.45C22.44 15.57 15.97 21.51 14.99 29.17L10.17 29.17C10.49 24.15 12.61 19.46 16.26 15.86C20.15 12.01 25.25 9.88 30.65 9.88C30.69 9.88 30.74 9.88 30.77 9.88C41.57 9.94 50.47 18.48 51.13 29.17L45.94 29.17ZM18.28 36.73C18.23 36.72 18.18 36.72 18.13 36.72L3.16 36.72C2.77 35.06 2.53 33.35 2.45 31.6L22.46 31.6L18.28 36.73ZM12.58 43.72L5.82 43.72C5.03 42.27 4.37 40.74 3.85 39.15L16.31 39.15L12.58 43.72ZM7.31 46.15L10.6 46.15L8.89 48.24C8.34 47.56 7.8 46.87 7.31 46.15ZM56.63 45.69C56.7 45.59 56.77 45.48 56.82 45.36C58.06 43.19 59.03 40.84 59.72 38.37C59.74 38.3 59.76 38.23 59.77 38.15C60.43 35.67 60.78 33.07 60.78 30.38C60.77 13.62 47.15 0 30.38 0C13.62 0 0 13.62 0 30.38C0 33.07 0.35 35.66 1 38.14C1.02 38.24 1.04 38.32 1.08 38.41C1.74 40.86 2.72 43.19 3.96 45.36C4.01 45.48 4.07 45.59 4.15 45.69C5.23 47.54 6.5 49.26 7.93 50.84C7.99 50.93 8.07 51.01 8.15 51.07C8.16 51.07 8.16 51.09 8.18 51.09C10.01 53.06 12.09 54.77 14.37 56.2C14.39 56.22 14.39 56.22 14.4 56.23C14.42 56.25 14.46 56.26 14.5 56.29C17.16 57.93 20.09 59.17 23.2 59.92C23.23 59.93 23.25 59.93 23.28 59.95C25.57 60.49 27.95 60.8 30.4 60.8C35.83 60.8 40.93 59.35 45.36 56.85C45.46 56.81 45.54 56.76 45.63 56.7C45.63 56.7 45.63 56.69 45.64 56.69C48.23 55.18 50.59 53.3 52.62 51.12C52.63 51.11 52.63 51.11 52.64 51.11C52.73 51.04 52.8 50.96 52.86 50.88C54.28 49.26 55.55 47.54 56.63 45.69Z" fill="#D8AE5E" fill-opacity="1.000000" fill-rule="nonzero"></path>
+						</svg>
+					</div>
+
+					<h2 class="intro__title">
+						<span>M</span>
+						<span>I</span>
+						<span>Ó</span>
+						<span>D</span>
+						<span>&nbsp;</span>
+						<span>M</span>
+						<span>A</span>
+						<span>L</span>
+						<span>I</span>
+						<span>N</span>
+						<span>A</span>
+					</h2>
+
+					<div class="intro__sub-title">OSADA ISTEBNA</div>
+				</div>
+			</div>
+			<section data-watch="navigator" data-fp-section class="page__hero hero">
 				<div class="hero__container">
 					<div class="hero__content content-hero">
 						<h1 class="content-hero__title">MIÓD MALINA</h1>
 						<div class="content-hero__text">OSADA ISTEBNA</div>
-						<a href="#" class="content-hero__button button">ZOBACZ WIĘCEJ</a>
+						<button type="button" data-goto=".about-us__container" class="content-hero__button button">ZOBACZ
+							WIĘCEJ</button>
 					</div>
 				</div>
 
@@ -70,7 +110,7 @@
 				</div>
 			</section>
 
-			<section data-fp-section class="page__about-us about-us">
+			<section data-watch="navigator" data-fp-section class="page__about-us about-us">
 				<div class="about-us__container">
 					<div class="about-us__wrapper">
 						<div class="about-us__top block-title">
@@ -103,7 +143,7 @@
 				</div>
 			</section>
 
-			<section data-fp-section class="page__event event">
+			<section data-watch="navigator" data-fp-section class="page__event event">
 				<div class="event__container">
 					<div class="event__body">
 						<div class="event__header block-title">
@@ -159,7 +199,7 @@
 				</div>
 			</section>
 
-			<section data-fp-section class="page__amenities amenities">
+			<section data-watch="navigator" data-fp-section class="page__amenities amenities">
 				<div class="amenities__container">
 					<div class="amenities__top block-title">
 						<h2 class="block-title__title">UDOGODNIENIA</h2>
@@ -170,12 +210,12 @@
 					<!-- Оболонка слайдера -->
 					<div class="amenities__slider swiper">
 						<!-- Частина слайдера, що рухається -->
-						<div class="amenities__wrapper swiper-wrapper">
+						<div data-gallery class="amenities__wrapper swiper-wrapper">
 							<!-- Слайд -->
 							<div class="amenities__slide swiper-slide slide-amenities">
 								<h3 class="amenities__title-slide">W NASZEJ OSADZIE CZEKAJĄ NA NASZYCH GOŚCI</h3>
 
-								<div data-gallery class="amenities__images gallery">
+								<div class="amenities__images gallery">
 									<a href="img/amenities/01.webp" class="amenities__item gallery__image">
 										<img class="amenities__img gallery__preview" src="img/amenities/01.webp" alt="NARCIARNIA">
 
@@ -229,7 +269,7 @@
 							<div class="amenities__slide swiper-slide slide-amenities">
 								<h3 class="amenities__title-slide">W KAŻDYM DOMKU GOŚCIE MAJĄ DO DYSPOZYCJI</h3>
 
-								<div data-gallery class="amenities__images gallery">
+								<div class="amenities__images gallery">
 									<a href="img/amenities/07.webp" class="amenities__item gallery__image">
 										<img class="amenities__img gallery__preview" src="img/amenities/07.webp" alt="TARAS Z WIDOKIEM">
 
@@ -299,7 +339,7 @@
 				</div>
 			</section>
 
-			<section data-fp-section class="page__contact-us contact-us">
+			<section data-watch="navigator" data-fp-section class="page__contact-us contact-us">
 				<div class="contact-us__container">
 					<div class="contact-us__body">
 						<div class="contact-us__header block-title">
@@ -393,7 +433,7 @@
 	</div>
 </footer> -->
 	</div>
-	<script src="js/app.min.js?_v=20241104120804"></script>
+	<script src="js/app.min.js?_v=20241105121805"></script>
 </body>
 
 </html>
