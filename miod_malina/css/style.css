@@ -159,6 +159,9 @@ body {
   transition: all .3s;
   color: #fff
 }
+.wrapper:has([data-fp-id="0"].active-section) .menu__link._navigator-active {
+  color: #fff
+}
 .menu-open .wrapper:has([data-fp-id="0"].active-section) .menu__link {
   transition: color .3s;
   color: #000
@@ -370,16 +373,24 @@ body {
   width: 100%;
   z-index: 50;
   visibility: hidden;
-  opacity: 0
+  opacity: 0;
+  transition: background-color .1s .4s,box-shadow .1s .4s
 }
-.wrapper:has([data-fp-id="1"].active-section) .header,
-.wrapper:has([data-fp-id="2"].active-section) .header,
-.wrapper:has([data-fp-id="3"].active-section) .header,
-.wrapper:has([data-fp-id="4"].active-section) .header,
-.wrapper:has([data-fp-id="5"].active-section) .header {
+.header::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
   background-color: rgba(255,255,255,.9);
   box-shadow: 0 .0625rem .625rem .625rem rgba(255,255,255,.9);
-  transition: background-color .1s .4s,box-shadow .1s .4s
+  transition: opacity .1s .4s,background-color .1s .4s,box-shadow .1s .4s
+}
+.wrapper:has([data-fp-id="0"].active-section) .header::before {
+  opacity: 0;
+  transition: opacity 0s
 }
 .header__container {
   padding-top: .3125rem;
